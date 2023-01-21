@@ -1,0 +1,23 @@
+state={
+	id=909
+	name="STATE_909"
+	
+	history={
+		owner = ADO
+		victory_points = {
+			13257 5 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 3
+		}
+	}
+	
+	provinces={
+		13257 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

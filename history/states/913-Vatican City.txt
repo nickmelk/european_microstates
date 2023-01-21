@@ -1,0 +1,21 @@
+state={
+	id=913
+	name="STATE_913"
+	
+	history={
+		owner = VAT
+		victory_points = {
+			13261 5 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	
+	provinces={
+		13261 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
