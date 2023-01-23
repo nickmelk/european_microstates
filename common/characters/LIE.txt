@@ -1,0 +1,50 @@
+characters = {
+	LIE_franz_i = {
+		name = "Franz I"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Europe_Generic_4
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1938.7.25"
+		}
+	}
+	LIE_franz_joseph_ii = {
+		name = "Franz Joseph II"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Europe_Generic_5
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1989.11.13"
+		}
+	}
+	LIE_paul_hasler = {
+		name = "Paul Hasler"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Europe_Generic_1
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1950.1.1"
+		}
+	}
+	LIE_macro_frick = {
+		name = "Macro Frick"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Europe_Generic_3
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1950.1.1"
+		}
+	}
+}

@@ -1,0 +1,41 @@
+﻿capital = 913
+
+oob = "VAT_1936"
+
+set_war_support = 0.0
+set_stability = 0.8
+
+add_ideas = {
+	disarmed_nation
+}
+
+recruit_character = VAT_pope_pius_xi
+recruit_character = VAT_pope_pius_xii
+
+1939.1.1 = {
+	add_political_power = 1198
+	
+	oob = "VAT_1939"
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1922.2.6"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1939.3.2"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	promote_character = VAT_pope_pius_xii
+	retire_character = VAT_pope_pius_xi
+}

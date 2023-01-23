@@ -15,6 +15,7 @@ state={
 			}
 		}
 		add_core_of = MCO
+		add_core_of = SPM
 	}
 	
 	provinces={

@@ -1,0 +1,13 @@
+characters = {
+	SMR_captains_regent = {
+		name = "Captains Regent"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Europe_generic_5
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+		}
+	}
+}

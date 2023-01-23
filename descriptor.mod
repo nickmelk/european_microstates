@@ -11,3 +11,4 @@ tags={
 picture="thumbnail.png"
 name="European Microstates"
 supported_version="1.12.*"
+remote_file_id="2922265677"

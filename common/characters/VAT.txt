@@ -1,0 +1,26 @@
+characters = {
+	VAT_pope_pius_xi = {
+		name = "Pope Pius XI"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Europe_generic_5
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1939.2.10"
+		}
+	}
+	VAT_pope_pius_xii = {
+		name = "Pope Pius XII"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Europe_Generic_3
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1958.10.9"
+		}
+	}
+}

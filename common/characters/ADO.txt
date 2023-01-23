@@ -1,0 +1,14 @@
+characters = {
+	ADO_justi_guitart_i_vilardebo = {
+		name = "Justí Guitart i Vilardebó"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Europe_Generic_6
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1940.1.20"
+		}
+	}
+}
