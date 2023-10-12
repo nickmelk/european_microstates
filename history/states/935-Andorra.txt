@@ -1,11 +1,11 @@
 state={
-	id=909
-	name="STATE_909"
+	id=935
+	name="STATE_935"
 	
 	history={
 		owner = ADO
 		victory_points = {
-			13257 3 
+			13273 3
 		}
 		buildings = {
 			infrastructure = 1
@@ -14,7 +14,7 @@ state={
 	}
 	
 	provinces={
-		13257 
+		13273 
 	}
 	manpower=6000
 	buildings_max_level_factor=1.000
