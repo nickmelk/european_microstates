@@ -1,16 +1,16 @@
 state={
-	id=937
-	name="STATE_937"
+	id=972
+	name="STATE_972"
 	
 	history={
 		owner = MCO
 		victory_points = {
-			13275 3
+			13365 3
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			13275 = {
+			13365 = {
 				naval_base = 1
 			}
 		}
@@ -19,7 +19,7 @@ state={
 	}
 	
 	provinces={
-		13275 
+		13365 
 	}
 	manpower=24000	
 	buildings_max_level_factor=1.000

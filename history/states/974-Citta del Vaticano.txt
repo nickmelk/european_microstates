@@ -1,23 +1,23 @@
 state={
-	id=936
-	name="STATE_936"
+	id=974
+	name="STATE_974"
 	
 	history={
-		owner = LIE
+		owner = VAT
 		victory_points = {
-			13274 3
+			13367 3
 		}
 		buildings = {
-			infrastructure = 1
-			industrial_complex = 2
+			infrastructure = 3
 		}
-		add_core_of = LIE
+		add_core_of = VAT
+		add_core_of = PAP
 	}
 	
 	provinces={
-		13274 
+		13367 
 	}
-	manpower=10500	
+	manpower=1000	
 	buildings_max_level_factor=1.000
 	state_category=rural
 	local_supplies=0.000
