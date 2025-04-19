@@ -1,0 +1,35 @@
+add_namespace = andorra
+
+country_event = {
+	id = andorra.1
+	title = andorra.1.t
+	desc = andorra.1.d
+	picture = GFX_report_event_chamberlain
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ADO
+		date > 1940.1.29
+	}	
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 7 }
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ADO_bishop_died
+			remove_ideas = ADO_justi_guitart_i_vilardebo
+			add_ideas = ADO_ricard_fornesa_i_puigdemasa
+		}		
+	}
+	
+	option = {
+		name = andorra.1.a
+		effect_tooltip = {
+			remove_ideas = ADO_justi_guitart_i_vilardebo
+			add_ideas = ADO_ricard_fornesa_i_puigdemasa
+		}
+	}
+}

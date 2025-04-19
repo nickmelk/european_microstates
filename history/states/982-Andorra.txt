@@ -1,0 +1,29 @@
+state={
+	id=982
+	name="STATE_982"
+	
+	history={
+		owner = ADO
+		victory_points = {
+			13366 3
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = ADO
+		add_core_of = CAT
+		add_claim_by = SPR
+		1939.1.1 = {
+			remove_claim_by = SPR
+		}
+	}
+	
+	provinces={
+		13366 
+	}
+	manpower=5000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

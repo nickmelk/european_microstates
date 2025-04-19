@@ -1,0 +1,9 @@
+is_microstate = {
+	OR = {
+		original_tag = ADO
+		original_tag = LIE
+		original_tag = MCO
+		original_tag = SMR
+		original_tag = VAT
+	}
+}

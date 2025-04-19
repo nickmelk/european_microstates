@@ -1,0 +1,13 @@
+characters = {
+	TIZ_pierre_le_fur = {
+		name = "Pierre Le Fur"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Europe_Generic_4
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+		}
+	}
+}

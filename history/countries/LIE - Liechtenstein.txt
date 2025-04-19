@@ -1,4 +1,4 @@
-﻿capital = 971
+﻿capital = 983
 
 oob = "LIE_1936"
 
@@ -101,7 +101,7 @@ set_popularities = {
 
 1939.1.1 = {
 	set_politics = {
-		ruling_party = neutrality
+		ruling_party = democratic
 		last_election = "1938.7.25"
 		election_frequency = 48
 		elections_allowed = no

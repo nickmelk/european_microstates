@@ -356,6 +356,7 @@ give_guarantee = YUG
 give_guarantee = ROM
 give_guarantee = ADO
 give_guarantee = MCO
+give_guarantee = TIZ
 
 recruit_character = FRA_philippe_petain
 recruit_character = FRA_maurice_thorez

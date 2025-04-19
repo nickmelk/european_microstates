@@ -1,0 +1,624 @@
+invite_foreign_volunteers_cat = {
+	invite_volunteers_from_europe = {
+		icon = eng_propaganda_campaigns
+
+		cost = 50
+
+		available = {
+			is_microstate = yes
+			has_manpower < 10000
+			any_other_country = {
+				has_war = no
+				capital_scope = { is_on_continent = europe }
+			}
+		}
+
+		visible = {
+			# ROOT = {
+			# 	has_completed_focus = BALTIC_influence_neighbours
+			# }
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		remove_effect = {
+			hidden_effect = {
+				set_temp_variable = { foreign_volunteers = 0 }
+				for_each_scope_loop = {
+					array = global.countries
+					if = {
+						limit = {
+							exists = yes
+							has_war = no
+							NOT = { tag = PREV }
+							NOT = { has_war_with = PREV }
+							capital_scope = { is_on_continent = europe }
+						}
+						set_temp_variable = { country_volunteers = THIS.manpower_k }
+						multiply_temp_variable = { country_volunteers = 10 }
+						if = {
+							limit = {
+								PREV = { has_government = democratic }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = communism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = fascism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = neutrality }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+						}
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_manpower = var:country_volunteers
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+					}
+				}
+				add_manpower = var:foreign_volunteers
+			}
+			custom_effect_tooltip = ems_coming_volunteers_from_across_europe
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_manpower < 10000
+				OR = {
+					NOT = { has_government = democratic }
+					NOT = { has_government = neutrality }
+				}
+			}
+		}
+	}
+
+	invite_volunteers_from_north_america = {
+		icon = eng_propaganda_campaigns
+
+		cost = 50
+
+		available = {
+			is_microstate = yes
+			has_manpower < 10000
+			any_other_country = {
+				has_war = no
+				capital_scope = { is_on_continent = north_america }
+			}
+		}
+
+		visible = {
+			# ROOT = {
+			# 	has_completed_focus = BALTIC_influence_neighbours
+			# }
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		remove_effect = {
+			hidden_effect = {
+				set_temp_variable = { foreign_volunteers = 0 }
+				for_each_scope_loop = {
+					array = global.countries
+					if = {
+						limit = {
+							exists = yes
+							has_war = no
+							NOT = { tag = PREV }
+							NOT = { has_war_with = PREV }
+							capital_scope = { is_on_continent = north_america }
+						}
+						set_temp_variable = { country_volunteers = THIS.manpower_k }
+						multiply_temp_variable = { country_volunteers = 10 }
+						if = {
+							limit = {
+								PREV = { has_government = democratic }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = communism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = fascism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = neutrality }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+						}
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_manpower = var:country_volunteers
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+					}
+				}
+				add_manpower = var:foreign_volunteers
+			}
+			custom_effect_tooltip = ems_coming_volunteers_from_across_north_america
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_manpower < 10000
+				OR = {
+					NOT = { has_government = democratic }
+					NOT = { has_government = neutrality }
+				}
+			}
+		}
+	}
+
+	invite_volunteers_from_south_america = {
+		icon = eng_propaganda_campaigns
+
+		cost = 50
+
+		available = {
+			is_microstate = yes
+			has_manpower < 10000
+			any_other_country = {
+				has_war = no
+				capital_scope = { is_on_continent = south_america }
+			}
+		}
+
+		visible = {
+			# ROOT = {
+			# 	has_completed_focus = BALTIC_influence_neighbours
+			# }
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		remove_effect = {
+			hidden_effect = {
+				set_temp_variable = { foreign_volunteers = 0 }
+				for_each_scope_loop = {
+					array = global.countries
+					if = {
+						limit = {
+							exists = yes
+							has_war = no
+							NOT = { tag = PREV }
+							NOT = { has_war_with = PREV }
+							capital_scope = { is_on_continent = south_america }
+						}
+						set_temp_variable = { country_volunteers = THIS.manpower_k }
+						multiply_temp_variable = { country_volunteers = 10 }
+						if = {
+							limit = {
+								PREV = { has_government = democratic }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = communism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = fascism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = neutrality }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+						}
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_manpower = var:country_volunteers
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+					}
+				}
+				add_manpower = var:foreign_volunteers
+			}
+			custom_effect_tooltip = ems_coming_volunteers_from_across_south_america
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_manpower < 10000
+				OR = {
+					NOT = { has_government = democratic }
+					NOT = { has_government = neutrality }
+				}
+			}
+		}
+	}
+
+	invite_volunteers_from_australia = {
+		icon = eng_propaganda_campaigns
+
+		cost = 50
+
+		available = {
+			is_microstate = yes
+			has_manpower < 10000
+			any_other_country = {
+				has_war = no
+				capital_scope = { is_on_continent = australia }
+			}
+		}
+
+		visible = {
+			# ROOT = {
+			# 	has_completed_focus = BALTIC_influence_neighbours
+			# }
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		remove_effect = {
+			hidden_effect = {
+				set_temp_variable = { foreign_volunteers = 0 }
+				for_each_scope_loop = {
+					array = global.countries
+					if = {
+						limit = {
+							exists = yes
+							has_war = no
+							NOT = { tag = PREV }
+							NOT = { has_war_with = PREV }
+							capital_scope = { is_on_continent = australia }
+						}
+						set_temp_variable = { country_volunteers = THIS.manpower_k }
+						multiply_temp_variable = { country_volunteers = 10 }
+						if = {
+							limit = {
+								PREV = { has_government = democratic }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = communism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = fascism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = neutrality }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+						}
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_manpower = var:country_volunteers
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+					}
+				}
+				add_manpower = var:foreign_volunteers
+			}
+			custom_effect_tooltip = ems_coming_volunteers_from_across_australia
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_manpower < 10000
+				OR = {
+					NOT = { has_government = democratic }
+					NOT = { has_government = neutrality }
+				}
+			}
+		}
+	}
+
+	invite_volunteers_from_africa = {
+		icon = eng_propaganda_campaigns
+
+		cost = 50
+
+		available = {
+			is_microstate = yes
+			has_manpower < 10000
+			any_other_country = {
+				has_war = no
+				capital_scope = { is_on_continent = africa }
+			}
+		}
+
+		visible = {
+			# ROOT = {
+			# 	has_completed_focus = BALTIC_influence_neighbours
+			# }
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		remove_effect = {
+			hidden_effect = {
+				set_temp_variable = { foreign_volunteers = 0 }
+				for_each_scope_loop = {
+					array = global.countries
+					if = {
+						limit = {
+							exists = yes
+							has_war = no
+							NOT = { tag = PREV }
+							NOT = { has_war_with = PREV }
+							capital_scope = { is_on_continent = africa }
+						}
+						set_temp_variable = { country_volunteers = THIS.manpower_k }
+						multiply_temp_variable = { country_volunteers = 10 }
+						if = {
+							limit = {
+								PREV = { has_government = democratic }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = communism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = fascism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = neutrality }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+						}
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_manpower = var:country_volunteers
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+					}
+				}
+				add_manpower = var:foreign_volunteers
+			}
+			custom_effect_tooltip = ems_coming_volunteers_from_across_africa
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_manpower < 10000
+				OR = {
+					NOT = { has_government = democratic }
+					NOT = { has_government = neutrality }
+				}
+			}
+		}
+	}
+
+	invite_volunteers_from_asia = {
+		icon = eng_propaganda_campaigns
+
+		cost = 50
+
+		available = {
+			is_microstate = yes
+			has_manpower < 10000
+			any_other_country = {
+				has_war = no
+				capital_scope = { is_on_continent = asia }
+			}
+		}
+
+		visible = {
+			# ROOT = {
+			# 	has_completed_focus = BALTIC_influence_neighbours
+			# }
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		remove_effect = {
+			hidden_effect = {
+				set_temp_variable = { foreign_volunteers = 0 }
+				for_each_scope_loop = {
+					array = global.countries
+					if = {
+						limit = {
+							exists = yes
+							has_war = no
+							NOT = { tag = PREV }
+							NOT = { has_war_with = PREV }
+							capital_scope = { is_on_continent = asia }
+						}
+						set_temp_variable = { country_volunteers = THIS.manpower_k }
+						multiply_temp_variable = { country_volunteers = 10 }
+						if = {
+							limit = {
+								PREV = { has_government = democratic }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = communism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = fascism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = neutrality }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+						}
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_manpower = var:country_volunteers
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+					}
+				}
+				add_manpower = var:foreign_volunteers
+			}
+			custom_effect_tooltip = ems_coming_volunteers_from_across_asia
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_manpower < 10000
+				OR = {
+					NOT = { has_government = democratic }
+					NOT = { has_government = neutrality }
+				}
+			}
+		}
+	}
+
+	invite_volunteers_from_middle_east = {
+		icon = eng_propaganda_campaigns
+
+		cost = 50
+
+		available = {
+			is_microstate = yes
+			has_manpower < 10000
+			any_other_country = {
+				has_war = no
+				capital_scope = { is_on_continent = middle_east }
+			}
+		}
+
+		visible = {
+			# ROOT = {
+			# 	has_completed_focus = BALTIC_influence_neighbours
+			# }
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		remove_effect = {
+			hidden_effect = {
+				set_temp_variable = { foreign_volunteers = 0 }
+				for_each_scope_loop = {
+					array = global.countries
+					if = {
+						limit = {
+							exists = yes
+							has_war = no
+							NOT = { tag = PREV }
+							NOT = { has_war_with = PREV }
+							capital_scope = { is_on_continent = middle_east }
+						}
+						set_temp_variable = { country_volunteers = THIS.manpower_k }
+						multiply_temp_variable = { country_volunteers = 10 }
+						if = {
+							limit = {
+								PREV = { has_government = democratic }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = communism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = fascism }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+						}
+						else_if = {
+							limit = {
+								PREV = { has_government = neutrality }
+							}
+							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+						}
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_manpower = var:country_volunteers
+						multiply_temp_variable = { country_volunteers = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+					}
+				}
+				add_manpower = var:foreign_volunteers
+			}
+			custom_effect_tooltip = ems_coming_volunteers_from_across_middle_east
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_manpower < 10000
+				OR = {
+					NOT = { has_government = democratic }
+					NOT = { has_government = neutrality }
+				}
+			}
+		}
+	}
+}

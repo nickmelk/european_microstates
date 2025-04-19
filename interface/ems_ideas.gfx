@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_idea_ado_limited_sovereignty"
+		texturefile = "gfx/interface/ideas/idea_ado_limited_sovereignty.dds"
+	}
+}

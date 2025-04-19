@@ -1,5 +1,0 @@
-ADO	= "countries/Andorra.txt"
-LIE	= "countries/Liechtenstein.txt"
-MCO	= "countries/Monaco.txt"
-SMR	= "countries/San Marino.txt"
-VAT	= "countries/Vatican City.txt"

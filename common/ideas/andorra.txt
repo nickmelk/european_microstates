@@ -1,0 +1,182 @@
+ideas = {
+	country = {
+		ADO_limited_sovereignty = {
+			picture = ado_limited_sovereignty
+
+			allowed = {
+				tag = ADO
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = 0.1
+				custom_modifier_tooltip = ADO_limited_sovereignty_tt
+			}
+
+			rule = {
+				can_join_factions = no
+				can_not_declare_war = yes
+				can_send_volunteers = no
+			}
+
+			cancel = {
+				OR = {
+					has_war_with = FRA
+					NOT = { country_exists = FRA }
+				}
+			}
+		}
+
+		ADO_agrarian_society = {
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = ADO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.5
+			}
+		}
+
+		ADO_political_instability = {
+			picture = generic_democratic_opposition
+
+			allowed = {
+				tag = ADO
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.01
+				political_power_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+
+		ADO_rural_tradition = {
+			picture = ado_rural_tradition
+
+			allowed = {
+				original_tag = ADO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+				political_power_factor = 0.05
+				conscription_factor = -0.25
+			}
+		}
+
+		ADO_collectivization_idea = {
+			picture = ado_collectivization_idea
+
+			allowed = {
+				original_tag = ADO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				conscription_factor = -0.05
+			}
+		}
+
+		ADO_rural_decline = {
+			picture = prc_low_popular_support3
+
+			allowed = {
+				original_tag = ADO
+			}
+
+			available = {
+				has_war = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.2
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.15
+			}
+		}
+
+		ADO_industrializing_society = {
+			picture = man_five_year_plan_industry
+
+			allowed = {
+				original_tag = ADO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				conscription_factor = -0.05
+			}
+		}
+	}
+
+	industrial_concern = {
+		ADO_fhasa = {
+			picture = ADO_fhasa
+			
+			allowed = {
+				original_tag = ADO
+			}
+
+			visible = {
+				# NOT = {
+				# 	has_completed_focus = GER_employ_philipp_holzmann
+				# 	has_completed_focus = GER_revitalize_the_nation
+				# }
+			}
+			
+			cost = 150
+
+			traits = { construction_company }
+
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 5
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+}

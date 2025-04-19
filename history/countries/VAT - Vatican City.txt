@@ -1,4 +1,4 @@
-﻿capital = 974
+﻿capital = 986
 
 oob = "VAT_1936"
 

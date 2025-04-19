@@ -1,6 +1,8 @@
 ﻿l_english:
- STATE_970: "Andorra"
- STATE_971: "Liechtenstein"
- STATE_972: "Monaco"
- STATE_973: "San Marino"
- STATE_974: "Città del Vaticano"
+ STATE_982: "Andorra"
+ STATE_983: "Liechtenstein"
+ STATE_984: "Monaco"
+ STATE_985: "San Marino"
+ STATE_986: "Vatican"
+ STATE_987: "Tangier"
+ STATE_988: "Channel Islands"

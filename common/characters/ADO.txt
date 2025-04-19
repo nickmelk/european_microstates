@@ -1,14 +1,86 @@
 characters = {
-	ADO_justi_guitart_i_vilardebo = {
-		name = "Justí Guitart i Vilardebó"
+	ADO_general_council = {
+		name = ADO_general_council
 		portraits = {
 			civilian = {
-				large = GFX_Portrait_Europe_Generic_6
+				large = GFX_portrait_ADO_general_council
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1965.1.1"
+		}
+	}
+	ADO_anarchist_commune = {
+		name = ADO_anarchist_commune
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ADO_anarchist_commune
+			}
+		}
+		country_leader = {
+			ideology = anarchist_communism
+			expire = "1965.1.1"
+		}
+	}
+	ADO_boris_i = {
+		name = ADO_boris_i
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ADO_boris_i
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1965.1.1"
+		}
+	}
+	ADO_pere_torres = {
+		name = ADO_pere_torres
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ADO_pere_torres
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1965.1.1"
+		}
+	}
+	ADO_francesc_molne_roge = {
+		name = ADO_francesc_molne_roge
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ADO_francesc_molne_roge
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1965.1.1"
+		}
+	}
+	ADO_francesc_cairat_fleixes = {
+		name = ADO_francesc_cairat_fleixes
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ADO_francesc_cairat_fleixes
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1965.1.1"
+		}
+	}
+	ADO_justi_guitart_i_vilardebo = {
+		name = ADO_justi_guitart_i_vilardebo
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ADO_justi_guitart_i_vilardebo
 			}
 		}
 		country_leader = {
 			ideology = despotism
-			expire = "1940.1.20"
+			expire = "1965.1.1"
 		}
 	}
 }

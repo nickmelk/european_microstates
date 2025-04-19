@@ -1,6 +1,7 @@
 ﻿l_polish:
- STATE_970: "Andora"
- STATE_971: "Lechtenstein"
- STATE_972: "Monako"
- STATE_973: "San Marino"
- STATE_974: "Watykan"
+ STATE_982: "Andora"
+ STATE_983: "Lechtenstein"
+ STATE_984: "Monako"
+ STATE_985: "San Marino"
+ STATE_986: "Watykan"
+ STATE_987: "Tanger"
