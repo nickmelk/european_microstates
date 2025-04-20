@@ -1,0 +1,24 @@
+state={
+	id=1021
+	name="STATE_1021"
+	
+	history={
+		owner = VAT
+		victory_points = {
+			13380 3
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = VAT
+		add_core_of = PAP
+	}
+	
+	provinces={
+		13380 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

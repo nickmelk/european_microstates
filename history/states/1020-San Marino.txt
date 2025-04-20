@@ -1,0 +1,24 @@
+state={
+	id=1020
+	name="STATE_1020"
+	
+	history={
+		owner = SMR
+		victory_points = {
+			13379 3
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = SMR
+	}
+	
+	provinces={
+		13379 
+	}
+	manpower=14500
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -1,0 +1,28 @@
+state={
+	id=1022
+	name="STATE_1022"
+	
+	history={
+		owner = TIZ
+		victory_points = {
+			13381 3
+		}
+		buildings = {
+			infrastructure = 2
+			13381 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = TIZ
+		add_core_of = MOR
+		set_demilitarized_zone = yes
+	}
+	
+	provinces={
+		13381 
+	}
+	manpower=50000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
