@@ -300,6 +300,57 @@ GER_anti_armor = {
 	}
 }
 
+GER_assault_armor = {
+	allowed = {
+		original_tag = GER
+		OR = {
+			has_dlc = "Gotterdammerung" # Needed for the assault engineers
+			has_dlc = "No Step Back" # Needed for Flame tanks
+		}
+	}
+	enable = {
+		OR = { 
+			has_war = yes
+			AND = {
+				ai_wants_divisions > 6 
+				date > 1939.6.1
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized_assault
+		value = 1
+	}
+}
+GER_assault_armor_ostfront = {
+	allowed = {
+		original_tag = GER
+		OR = {
+			has_dlc = "Gotterdammerung" # Needed for the assault engineers
+			has_dlc = "No Step Back" # Needed for Flame tanks
+		}
+	}
+	enable = {
+		OR = { 
+			has_war = yes
+			AND = {
+				ai_wants_divisions > 6 
+				has_war_with = SOV
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized_assault
+		value = 2
+	}
+}
+
 GER_armored_production = {
 	allowed = {
 		original_tag = GER
@@ -340,6 +391,12 @@ GER_halt_light_armor_production_in_transitioning = {
 		type = equipment_variant_production_factor
 		id = light_tank_chassis
 		value = -100
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_flame_chassis
+		value = 50
 	}
 
 	ai_strategy = {
@@ -558,7 +615,7 @@ GER_research_maus_to_enable_ratte = {
 		original_tag = GER
 	}
 	enable = {
-		date > 1943.5.1
+		date > 1944.5.1
 	}
 
 	abort = {
@@ -1278,6 +1335,16 @@ GER_force_concentration_through_maginot_hurts_too_much = {
 		state = 28 # Alsace-Lorraine
 		value = -100 # -100 % / Don't even consider targets here. Infantry and Artillery are better at dealing with the Maginot than tank formations are
 	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 18 # Champagne
+		value = -50 # -50 % / Let's try to avoid the areas behind the Maginot. It is risky, as we might end up trying to go through it anyways then
+	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 17 # Franche Comte
+		value = -75 # -75 % / Let's try to avoid the areas behind the Maginot. It is risky, as we might end up trying to go through it anyways then
+	}
 }
 
 GER_prepare_against_czechoslovakia = {
@@ -1747,7 +1814,7 @@ GER_start_the_blitz = {
 	enable = {
 		is_historical_focus_on = yes
 		has_war_with = ENG
-		ENG = { controls_state = 1 }
+		ENG = { controls_state = 126 } # Checks that they control London
 		FRA = { has_capitulated = yes }
 		NOT = { has_war_with = SOV }
 		date > 1940.1.1
@@ -1775,7 +1842,7 @@ GER_upgrade_the_blitz = {
 	enable = {
 		is_historical_focus_on = yes
 		has_war_with = ENG
-		ENG = { controls_state = 1 }
+		ENG = { controls_state = 126 } # Checks that they control London
 		FRA = { has_capitulated = yes }
 		NOT = { has_war_with = SOV }
 		date > 1940.3.1
@@ -1797,7 +1864,7 @@ GER_upgrade_the_blitz_again = {
 	enable = {
 		is_historical_focus_on = yes
 		has_war_with = ENG
-		ENG = { controls_state = 1 }
+		ENG = { controls_state = 126 } # Checks that they control London
 		FRA = { has_capitulated = yes }
 		NOT = { has_war_with = SOV }
 		date > 1940.6.1
@@ -2890,6 +2957,13 @@ GER_dont_invade_until_FRA_falls = {
 
 		value = -100
 	}
+
+	ai_strategy = {
+		# Even if we do invade Norway, we can play it cool there until France has fallen
+		type = front_unit_request
+		tag = NOR
+		value = -30  
+	}
 }
 
 GER_have_some_train_production = {
@@ -3172,7 +3246,7 @@ GER_blitz_france = {
 		state = 785 # Picardy
 		state = 16 # Ile de France
 		state = 15 # Normandy
-		state = 988 # Channel Islands
+		state = 1023 # Channel Islands
 		# include Belgium as well even though we hopefully have already taken it
 		state = 6 # Vlaanderen
 		state = 34 # Wallonie
@@ -3397,7 +3471,7 @@ GER_normandy_buffer = {
 			29
 			735
 			22
-			988
+			1023
 		}
 		ratio = 0.11
 		area = normandy_landing_zone
@@ -3433,7 +3507,7 @@ GER_invasion_buffer = {
 			23
 			29
 			6
-			988
+			1023
 		}
 		ratio = 0.20
 		area = normandy_landing_zone

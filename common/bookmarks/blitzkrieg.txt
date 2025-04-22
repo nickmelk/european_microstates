@@ -169,9 +169,11 @@ bookmarks = {
 				SAF_anti_colonialist_crusade
 			}
 		}
-		"RAJ"={
+
+		RAJ = {
 			minor = yes
 			history = "RAJ_BLITZKRIEG_DESC"
+			available = {  NOT = { has_dlc = "Graveyard of Empires" } }
 			ideology = neutrality
 			ideas = {
 				RAJ_agrarian_society
@@ -181,6 +183,23 @@ bookmarks = {
 				RAJ_all_india_forward_bloc
 				RAJ_indian_gurkhas
 				RAJ_the_smiling_buddha
+			}
+		}
+
+		RAJ = {
+			minor = yes
+			history = "RAJ_BLITZKRIEG_DESC"
+			available = {  has_dlc = "Graveyard of Empires" }
+			ideology = neutrality
+			ideas = {
+				RAJ_risk_of_famine
+				idea_RAJ_tenancy_reforms
+				idea_RAJ_boycott_british_made_goods
+			}
+			focuses = {
+				RAJ_a_congress_resurgent
+				RAJ_forward_bloc
+				RAJ_hindutva
 			}
 		}
 
@@ -661,6 +680,22 @@ bookmarks = {
 				ARG_the_american_push
 			}
 		}
+		"AFG"={
+			minor = yes
+			history = AFG_BLITZKRIEG_DESC
+			ideology = neutrality
+			available = { has_dlc = "Graveyard of Empires" }
+			ideas = {
+				AFG_mohammad_zahir_shah_ns
+				AFG_pashtunwali
+				AFG_renew_soviet_trade_agreement
+			}
+			focuses = {
+				AFG_secure_dynasty
+				AFG_qargha_dam
+				AFG_introduce_national_service
+			}
+		}
 		HUN = {
 			minor = yes
 			history = "HUN_BLITZKRIEG_DESC"
@@ -707,6 +742,38 @@ bookmarks = {
 				COG_emergency_powers_for_pierre_ryckmans
 				COG_the_intore_lion_dancers
 				CONGO_chefs_coutumiers
+			}
+		}
+		IRQ = {
+			minor = yes
+			history = "IRQ_BLITZKRIEG_DESC"
+			ideology = neutrality
+			available = { has_dlc = "Graveyard of Empires" }
+			ideas = {
+				IRQ_anglo_iraqi_treaty
+				IRQ_al_muthanna_club_idea
+				IRQ_agrarian_society
+			}
+			focuses = {
+				IRQ_eliminate_the_golden_square
+				IRQ_strengthen_the_golden_square
+				IRQ_refuge_for_the_grand_mufti
+			}
+		}
+		PER = {
+			minor = yes
+			history = PER_BLITZKRIEG_DESC
+			ideology = neutrality
+			available = { has_dlc = "Graveyard of Empires" }
+			ideas = {
+				PER_white_revolution_idea
+				PER_homeland_not_fall_idea
+				PER_future_of_war_idea
+			}
+			focuses = {
+				PER_wether_the_storm
+				PER_we_will_survive
+				PER_fight_for_iran
 			}
 		}
 		ADO = {

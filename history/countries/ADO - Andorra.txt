@@ -1,4 +1,4 @@
-﻿capital = 982
+﻿capital = 1017
 
 oob = "ADO_1936"
 

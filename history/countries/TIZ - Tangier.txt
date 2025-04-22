@@ -1,4 +1,4 @@
-capital = 987
+capital = 1022
 
 #oob = "TIZ_1936"
 
@@ -26,7 +26,7 @@ if = {
 
 recruit_character = TIZ_pierre_le_fur
 
-987 = {
+1022 = {
 	add_dynamic_modifier = { modifier = international_city }
 }
 

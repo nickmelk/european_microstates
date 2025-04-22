@@ -1,4 +1,4 @@
-﻿capital = 985
+﻿capital = 1020
 
 oob = "SMR_1936"
 

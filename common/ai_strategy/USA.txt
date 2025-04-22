@@ -306,7 +306,7 @@ USA_unit_buffer_for_europe = {
 			451
 			452
 			447
-			987
+			1022
 		}
 
 		ratio = 0.15
@@ -363,7 +363,7 @@ USA_unit_buffer_for_africa = {
 			451
 			452
 			447
-			987
+			1022
 		}
 
 		ratio = 0.2
@@ -504,7 +504,7 @@ USA_focus_on_africa = {
 			447 = { CONTROLLER = { has_war_with = ROOT } } # alexandria
 			446 = { CONTROLLER = { has_war_with = ROOT } } # cairo
 			290 = { CONTROLLER = { has_war_with = ROOT } } # spanish africa
-			987 = { CONTROLLER = { has_war_with = ROOT } } # tangier
+			1022 = { CONTROLLER = { has_war_with = ROOT } } # tangier
 		}
 	}
 	abort_when_not_enabled = yes

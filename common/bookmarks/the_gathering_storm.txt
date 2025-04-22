@@ -249,9 +249,11 @@ bookmarks = {
 				SAF_anti_colonialist_crusade
 			}
 		}
-		"RAJ"={
+
+		RAJ = {
 			minor = yes
 			history = "RAJ_GATHERING_STORM_DESC"
+			available = {  NOT = { has_dlc = "Graveyard of Empires" } }
 			ideology = neutrality
 			ideas = {
 				RAJ_agrarian_society
@@ -263,6 +265,24 @@ bookmarks = {
 				RAJ_the_smiling_buddha
 			}
 		}
+
+		RAJ = {
+			minor = yes
+			history = "RAJ_GATHERING_STORM_DESC"
+			available = {  has_dlc = "Graveyard of Empires" }
+			ideology = neutrality
+			ideas = {
+				RAJ_marginalized_muslim_community
+				RAJ_princely_states
+				idea_RAJ_great_depression_1
+			}
+			focuses = {
+				RAJ_mahatma
+				RAJ_netaji
+				RAJ_a_peacock_prince
+			}
+		}
+
 		"CZE"={
 			minor = yes
 			history = "CZE_GATHERING_STORM_DESC"
@@ -843,6 +863,55 @@ bookmarks = {
 				COG_governor_general_pierre_ryckmans
 				COG_national_committee_for_liberation
 				COG_the_kingdom_of_kongo_focus
+			}
+		}
+		PER = {
+			minor = yes
+			history = PER_GATHERING_STORM_DESC
+			ideology = neutrality
+			available = { has_dlc = "Graveyard of Empires" }
+			ideas = {
+				PER_anglo_iranian_oil_ns
+				PER_homeland_not_fall_idea
+				PER_imperial_expansionism_idea
+			}
+			focuses = {
+				PER_fight_for_iran
+				PER_glory_of_cyrus
+				PER_strengthen_iranian_parliament
+			}
+		}
+		AFG = {
+			minor = yes
+			history = "AFG_GATHERING_STORM_DESC" #might need an edit because it is not very good at the moment.
+			ideology = neutrality
+			available = { has_dlc = "Graveyard of Empires" }
+			ideas = {
+				AFG_mohammad_zahir_shah_ns
+				AFG_turkish_military_mission
+				AFG_pashtunwali
+			}
+			focuses = {
+				AFG_biding_our_time
+				AFG_expand_the_kings_powerbase
+				AFG_contact_amanullah_loyalists
+			}
+		}
+		IRQ = {
+			minor = yes
+			history = "IRQ_GATHERING_STORM_DESC"
+			ideology = neutrality
+			available = { has_dlc = "Graveyard of Empires" }
+			ideas = {
+				IRQ_golden_square
+				IRQ_anglo_iraqi_treaty
+				IRQ_agrarian_society
+			}
+			focuses = {
+				IRQ_rally_behind_the_hashemite_dynasty
+				IRQ_bakr_sidqi_coup
+				#Replace this with KUR focus
+				IRQ_decouple_from_the_pound
 			}
 		}
 		ADO = {
