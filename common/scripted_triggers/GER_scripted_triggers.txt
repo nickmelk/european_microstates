@@ -585,7 +585,7 @@ GER_is_RKI_state = {
 		state = 179
 		state = 112
 		state = 806
-		state = 982
+		state = 1017
 	}
 }
 
@@ -743,7 +743,7 @@ GER_is_RNA_state = {
 		state = 782 # Tomboctu
 		state = 775 # BET
 		state = 515 # Nigerian Sahara
-		state = 987
+		state = 1022
 	}
 }
 
@@ -1064,6 +1064,13 @@ GER_is_RAR_state = {
 		state = 659
 		state = 293
 		state = 294
+		state = 1010
+		state = 1011
+		state = 1013
+		state = 1014
+		state = 1015
+		state = 1016
+		state = 992
 	}
 }
 
@@ -1106,6 +1113,11 @@ GER_is_additional_RAR_iran_state = {
 		state = 416
 		state = 414
 		state = 410
+		state = 1000
+		state = 1001
+		state = 1004
+		state = 1002
+		state = 1003
 	}
 }
 
@@ -1150,6 +1162,29 @@ GER_is_RHD_state = {
 		state = 322
 		state = 757
 		state = 601
+		state = 1009
+		state = 1007
+		state = 988
+		state = 1008
+		state = 1012
+		state = 1005
+		state = 1006
+		state = 987
+		state = 989
+		state = 986
+		state = 991
+		state = 983
+		state = 982
+		state = 984
+		state = 985
+		state = 990
+		state = 998
+		state = 999
+		state = 997
+		state = 996
+		state = 994
+		state = 993
+		state = 995
 	}
 }
 
@@ -1377,6 +1412,15 @@ GER_occupied_states_level_5 = {
 	check_variable = { GER_num_of_occupied_states > 49 }
 }
 
+#These are different Trade ideas nations can have with Germany
+has_a_german_trade_idea = {
+	OR = {
+		has_idea = GER_german_trade_ns
+		has_idea = GER_german_trade_subject_ns
+		has_idea = GER_chi_ger_trade_ns
+		has_idea = GER_chi_ger_trade_ns_2
+	}
+}
 
 
 #### INNER CIRCLE ####

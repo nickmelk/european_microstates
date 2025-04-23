@@ -5261,6 +5261,7 @@
 				range < SWI_centralization_bop_very_council
 			}
 			owns_state = 848
+			country_exists = LIE
 		}
 		
 		bypass = {
@@ -5277,8 +5278,11 @@
 				ideology = neutrality 
 				popularity = 0.01 
 			}
-			puppet = LIE
-			983 = {
+			annex_country = {
+				target = LIE
+				transfer_troops = yes
+			}
+			1018 = {
 				if = {
 					limit = {
 						free_building_slots = {
