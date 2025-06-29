@@ -914,17 +914,17 @@ bookmarks = {
 				IRQ_decouple_from_the_pound
 			}
 		}
-		ADO = {
-			minor = yes
-			history = "ADO_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				ADO_limited_sovereignty
-				ADO_agrarian_society
-				ADO_political_instability
-			}
-			focuses = { }
-		}
+		# ADO = {
+		# 	minor = yes
+		# 	history = "ADO_GATHERING_STORM_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		ADO_limited_sovereignty
+		# 		ADO_agrarian_society
+		# 		ADO_political_instability
+		# 	}
+		# 	focuses = { }
+		# }
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

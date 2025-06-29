@@ -1,5 +1,33 @@
 ideas = {
 	country = {
+		ADO_andorran_peseta = {
+			picture = ado_andorran_peseta
+
+			allowed = {
+				original_tag = ADO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+
+			cancel = {
+				OR = {
+					SPA = {
+						controls_province = 3898
+					}
+					has_global_flag = scw_over
+				}
+			}
+		}
+
 		ADO_limited_sovereignty = {
 			picture = ado_limited_sovereignty
 
@@ -147,6 +175,25 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.05
 				conscription_factor = -0.05
+			}
+		}
+
+		ADO_spirit_of_the_andosins = {
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = ADO
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
 			}
 		}
 	}

@@ -47,6 +47,22 @@ characters = {
 			expire = "1965.1.1"
 		}
 	}
+
+
+
+
+	ADO_justi_guitart_i_vilardebo = {
+		name = ADO_justi_guitart_i_vilardebo
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ADO_justi_guitart_i_vilardebo
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1"
+		}
+	}
 	ADO_francesc_molne_roge = {
 		name = ADO_francesc_molne_roge
 		portraits = {
@@ -68,18 +84,6 @@ characters = {
 		}
 		country_leader = {
 			ideology = oligarchism
-			expire = "1965.1.1"
-		}
-	}
-	ADO_justi_guitart_i_vilardebo = {
-		name = ADO_justi_guitart_i_vilardebo
-		portraits = {
-			civilian = {
-				large = GFX_portrait_ADO_justi_guitart_i_vilardebo
-			}
-		}
-		country_leader = {
-			ideology = despotism
 			expire = "1965.1.1"
 		}
 	}

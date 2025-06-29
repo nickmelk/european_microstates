@@ -601,24 +601,24 @@ JAP_avoid_joining_vichy = { #This is required due to declare_war command executi
 	}
 }
 
-FRA_protect_andorra = {
-	allowed = {
-		original_tag = FRA
-	}
+# FRA_protect_andorra = {
+# 	allowed = {
+# 		original_tag = FRA
+# 	}
 
-	enable = {
-	}
+# 	enable = {
+# 	}
 
-	abort_when_not_enabled = yes
+# 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = protect
-		id = ADO
-		value = 200
-	}
-	ai_strategy = {
-		type = befriend
-		id = ADO
-		value = 200
-	}
-}
+# 	ai_strategy = {
+# 		type = protect
+# 		id = ADO
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = ADO
+# 		value = 200
+# 	}
+# }

@@ -30,12 +30,12 @@ if = {
 	}
 }
 
-add_ideas = {
-	ADO_limited_sovereignty
-	ADO_agrarian_society
-	ADO_political_instability
-	neutrality_idea
-}
+# add_ideas = {
+# 	ADO_limited_sovereignty
+# 	ADO_agrarian_society
+# 	ADO_political_instability
+# 	neutrality_idea
+# }
 
 recruit_character = ADO_general_council
 recruit_character = ADO_anarchist_commune

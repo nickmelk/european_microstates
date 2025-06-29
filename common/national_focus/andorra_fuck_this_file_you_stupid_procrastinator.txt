@@ -1,0 +1,4452 @@
+	focus = {
+		id = ADO_fhasa_expansion
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_andorran_peseta
+
+		prerequisite = {
+			focus = ADO_andorran_peseta
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_country_modernisation
+
+		icon = GFX_focus_generic_hydroelectric_energy
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_fhasa_expansion
+
+		prerequisite = {
+			focus = ADO_fhasa_expansion
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+		
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_develop_our_strengths
+
+		icon = GFX_focus_generic_agricultural_subsidies
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_asphalt_revolution
+
+		prerequisite = {
+			focus = ADO_asphalt_revolution
+		}
+
+		mutually_exclusive = {
+			focus = ADO_forced_industrialisation
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+
+		cost = 10
+
+		completion_reward = {
+			if = {
+				limit = { 
+					has_idea = ADO_agrarian_society
+				}
+				swap_ideas = { 
+					remove_idea = ADO_agrarian_society
+					add_idea = ADO_rural_tradition
+				}
+			}
+			else_if = { 
+				limit = { 
+					has_idea = ADO_collectivization_idea
+				}
+				add_timed_idea = {
+					idea = ADO_rural_decline
+					days = 280
+				}
+				add_stability = -0.05
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = ADO_support_the_farmers
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_develop_our_strengths
+
+		prerequisite = {
+			focus = ADO_develop_our_strengths
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_expand_our_tobacco_industry
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_develop_our_strengths
+
+		prerequisite = {
+			focus = ADO_develop_our_strengths
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_increase_luxury_exports
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_support_the_farmers
+
+		prerequisite = {
+			focus = ADO_support_the_farmers
+			focus = ADO_expand_our_tobacco_industry
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_attract_foreign_investors
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_country_modernisation
+
+		prerequisite = {
+			focus = ADO_country_modernisation
+		}
+		prerequisite = {
+			focus = ADO_increase_luxury_exports
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_open_up_the_country
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_increase_luxury_exports
+
+		prerequisite = {
+			focus = ADO_increase_luxury_exports
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_explore_tourism_opportunities
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_open_up_the_country
+
+		prerequisite = {
+			focus = ADO_attract_foreign_investors
+		}
+		prerequisite = {
+			focus = ADO_open_up_the_country
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_forced_industrialisation
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = 4
+		y = 1
+
+		relative_position_id = ADO_asphalt_revolution
+
+		prerequisite = {
+			focus = ADO_asphalt_revolution
+		}
+
+		mutually_exclusive = {
+			focus = ADO_develop_our_strengths
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+
+		cost = 10
+
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+				has_completed_focus = ADO_legacy_of_aragon
+			}
+		}
+
+		completion_reward = {
+			if = { 
+				limit = { 
+					has_idea = ADO_agrarian_society
+				}
+				swap_ideas = {
+					remove_idea = ADO_agrarian_society
+					add_idea = ADO_industrializing_society
+				}
+				add_stability = -0.15
+			}
+			else_if = { 
+				limit = { 
+					has_idea = ADO_collectivization_idea
+				}
+				add_timed_idea = {
+					idea = ADO_rural_decline 
+					days = 280
+				}
+				add_stability = -0.10
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				OR = {
+					has_cosmetic_tag = ADO_aragon
+				}
+			}
+			modifier = {
+				add = 5
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ADO_food_industries
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_forced_industrialisation
+
+		prerequisite = {
+			focus = ADO_forced_industrialisation
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_establish_military_industry
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_food_industries
+
+		prerequisite = {
+			focus = ADO_food_industries
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_expand_land_for_military_industry
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_establish_military_industry
+
+		prerequisite = {
+			focus = ADO_establish_military_industry
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_railways_of_andorra
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_forced_industrialisation
+
+		prerequisite = {
+			focus = ADO_forced_industrialisation
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_survey_for_new_deposits
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_railways_of_andorra
+
+		prerequisite = {
+			focus = ADO_railways_of_andorra
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_hydroelectricity
+		icon = GFX_focus_generic_hydroelectric_energy
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_survey_for_new_deposits
+
+		prerequisite = {
+			focus = ADO_food_industries
+		}
+		prerequisite = {
+			focus = ADO_survey_for_new_deposits
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_mobilize_the_economy
+
+		icon = GFX_goal_generic_trade
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_expand_land_for_military_industry
+
+		prerequisite = {
+			focus = ADO_expand_land_for_military_industry
+		}
+		prerequisite = {
+			focus = ADO_hydroelectricity
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_universitat_andorra
+
+		icon = GFX_focus_research2
+
+		x = 2
+		y = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		relative_position_id = ADO_explore_tourism_opportunities
+
+		prerequisite = {
+			focus = ADO_explore_tourism_opportunities
+			focus = ADO_mobilize_the_economy
+		}
+
+		cost = 10
+
+		available = {
+			if = {
+				limit = { amount_research_slots > 2 }
+				num_of_factories > 15
+			}
+			amount_research_slots < 5
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_explore_oil_possibilities
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_railways_of_andorra
+
+		prerequisite = {
+			focus = ADO_railways_of_andorra
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	## Political Branches ##
+
+	focus = {
+		id = ADO_preserve_the_co_principality
+
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+
+		x = 17
+		y = 0
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		relative_position_id = ADO_asphalt_revolution
+
+		mutually_exclusive = {
+			focus = ADO_question_the_co_princes
+		}
+
+		cost = 5
+
+		available = {
+			OR = {
+				has_idea = ADO_limited_sovereignty
+				AND = {
+					is_guaranteed_by = FRA
+					is_guaranteed_by = SPR
+				}
+			}
+		}
+
+		bypass = { }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_the_dual_rule
+	
+		icon = GFX_goal_generic_army_doctrines
+	
+		x = 0
+		y = 1
+	
+		relative_position_id = ADO_preserve_the_co_principality
+	
+		prerequisite = {
+			focus = ADO_preserve_the_co_principality
+		}
+	
+		cost = 10
+	
+		available = {
+	
+		}
+	
+		completion_reward = {
+			set_power_balance = {
+				id = ADO_power_balance
+				set_default = yes
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	## Democratic Branch ##
+
+	## Communist Branch ##
+
+	focus = {
+		id = ADO_ally_with_germany
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -2
+		y = 2
+
+		relative_position_id = ADO_side_with_the_spanish_nationalists
+
+		#prerequisite = {
+		#	focus = ADO_andorran_military
+		#}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_war_with_portugal
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_iberian_empire
+
+		prerequisite = {
+			focus = ADO_iberian_empire
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_iberian_empire
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 2
+
+		relative_position_id = ADO_claim_spanish_lands
+
+		prerequisite = {
+			focus = ADO_intervene_into_spain
+		}
+		prerequisite = {
+			focus = ADO_claim_spanish_lands
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_deal_with_soviets
+		icon = GFX_focus_ger_great_red_menace
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_claim_foix
+
+		prerequisite = {
+			focus = ADO_claim_foix
+			focus = ADO_war_with_portugal
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_review_role_of_french_president
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -2
+		y = 1
+
+		relative_position_id = ADO_intervene_into_spain
+
+		prerequisite = {
+			focus = ADO_intervene_into_spain
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_claim_foix
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_review_role_of_french_president
+
+		prerequisite = {
+			focus = ADO_review_role_of_french_president
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_his_majesty_one_and_only_emperor_boris
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_iberian_empire
+
+		prerequisite = {
+			focus = ADO_iberian_empire
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_establish_catalan_schools
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		prerequisite = {
+			focus = ADO_legacy_of_aragon
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_land_of_gods
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 10
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		# prerequisite = {
+		# 	focus = ADO_legacy_of_aragon
+		# }
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GRE
+				generator = { 47 }
+				expire = 0
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_italian_question
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 3
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		#prerequisite = {
+		#	focus = ADO_andorran_military
+		#}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = take_state_focus
+			    target = ITA
+			    generator = { 114 115 117 156 157 849 }
+			    expire = 0
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_descendants_of_the_andosins
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 2
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		prerequisite = {
+			focus = ADO_legacy_of_aragon
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ADO_spirit_of_the_andosins
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_marca_hispanica
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 5
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		#prerequisite = {
+		#	focus = ADO_andorran_military
+		#}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_promote_catalan_language
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_establish_catalan_schools
+
+		prerequisite = {
+			focus = ADO_establish_catalan_schools
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_restore_iberian_union
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 7
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		#prerequisite = {
+		#	focus = ADO_andorran_military
+		#}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_last_stand_of_charlemagne
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 8
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		#prerequisite = {
+		#	focus = ADO_andorran_military
+		#}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_christian_league
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 9
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		#prerequisite = {
+		#	focus = ADO_andorran_military
+		#}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_revenge_for_aragonese_crusade
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 10
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		#prerequisite = {
+		#	focus = ADO_andorran_military
+		#}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_war_with_france
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 11
+
+		relative_position_id = ADO_legacy_of_aragon
+
+		#prerequisite = {
+		#	focus = ADO_andorran_military
+		#}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = take_state_focus
+			    target = FRA
+			    generator = { 1 21 851 }
+			    expire = 0
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	## Monarchist Branch ##
+
+	focus = {
+		id = ADO_legacy_of_aragon
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 10
+		y = 0
+
+		relative_position_id = ADO_side_with_the_spanish_nationalists
+
+		prerequisite = {
+			focus = ADO_renounce_the_pareages
+		}
+
+		mutually_exclusive = {
+			focus = ADO_side_with_the_spanish_republicans
+			focus = ADO_side_with_the_spanish_nationalists
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_side_with_the_spanish_nationalists
+
+		icon = GFX_goal_support_fascism
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_no_more_gold_no_more_hams
+
+		prerequisite = {
+			focus = ADO_no_more_gold_no_more_hams
+		}
+		prerequisite = {
+			focus = ADO_expel_french_gendarmes
+		}
+
+		mutually_exclusive = {
+			focus = ADO_side_with_the_spanish_republicans
+			focus = ADO_legacy_of_aragon
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_return_of_boris
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_side_with_the_spanish_nationalists
+
+		prerequisite = {
+			focus = ADO_side_with_the_spanish_nationalists
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_draft_new_constitution
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_return_of_boris
+
+		prerequisite = {
+			focus = ADO_return_of_boris
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_tax_haven
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_draft_new_constitution
+
+		prerequisite = {
+			focus = ADO_draft_new_constitution
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_open_casinos
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_draft_new_constitution
+
+		prerequisite = {
+			focus = ADO_draft_new_constitution
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_invite_intellectuals
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -3
+		y = 1
+
+		relative_position_id = ADO_draft_new_constitution
+
+		prerequisite = {
+			focus = ADO_draft_new_constitution
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_send_diplomatic_mission_to_nationalists
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_side_with_the_spanish_nationalists
+
+		prerequisite = {
+			focus = ADO_side_with_the_spanish_nationalists
+		}
+
+		mutually_exclusive = {
+			focus = ADO_claim_the_diocese_of_urgell
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_send_them_aid
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_send_diplomatic_mission_to_nationalists
+
+		prerequisite = {
+			focus = ADO_send_diplomatic_mission_to_nationalists
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_claim_spanish_lands
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_claim_the_diocese_of_urgell
+
+		prerequisite = {
+			focus = ADO_claim_the_diocese_of_urgell
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_intervene_into_spain
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_send_them_aid
+
+		prerequisite = {
+			focus = ADO_send_them_aid
+			focus = ADO_claim_spanish_lands
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_claim_the_diocese_of_urgell
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 6
+		y = 1
+
+		relative_position_id = ADO_side_with_the_spanish_nationalists
+
+		prerequisite = {
+			focus = ADO_side_with_the_spanish_nationalists
+		}
+
+		mutually_exclusive = {
+			focus = ADO_send_diplomatic_mission_to_nationalists
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_side_with_the_spanish_republicans
+
+		icon = GFX_goal_support_communism
+
+		x = -7
+		y = 1
+
+		relative_position_id = ADO_no_more_gold_no_more_hams
+
+		prerequisite = {
+			focus = ADO_no_more_gold_no_more_hams
+		}
+		prerequisite = {
+			focus = ADO_expel_french_gendarmes
+		}
+
+		mutually_exclusive = {
+			focus = ADO_side_with_the_spanish_nationalists
+			focus = ADO_legacy_of_aragon
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_free_territory_of_the_valleys_of_andorra
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -4
+		y = 1
+
+		relative_position_id = ADO_side_with_the_spanish_republicans
+
+		prerequisite = {
+			focus = ADO_side_with_the_spanish_republicans
+		}
+
+		mutually_exclusive = {
+			focus = ADO_send_diplomatic_mission_to_spain
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_wake_up_iberian_workers
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_free_territory_of_the_valleys_of_andorra
+
+		prerequisite = {
+			focus = ADO_free_territory_of_the_valleys_of_andorra
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_militarize_society
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_wake_up_iberian_workers
+
+		prerequisite = {
+			focus = ADO_wake_up_iberian_workers
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_portuguese_anarchism
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_militarize_society
+
+		prerequisite = {
+			focus = ADO_militarize_society
+		}
+		prerequisite = {
+			focus = ADO_unite_under_anarchist_ideas
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_spread_revolution_to_france
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_portuguese_anarchism
+
+		prerequisite = {
+			focus = ADO_portuguese_anarchism
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_world_revolution
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_popular_front_block
+
+		prerequisite = {
+			focus = ADO_popular_front_block
+		}
+		prerequisite = {
+			focus = ADO_spread_revolution_to_france
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_global_defence_council
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_world_revolution
+
+		prerequisite = {
+			focus = ADO_world_revolution
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_popular_front_block
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_portuguese_anarchism
+
+		prerequisite = {
+			focus = ADO_portuguese_anarchism
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_unite_under_anarchist_ideas
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_wake_up_iberian_workers
+
+		prerequisite = {
+			focus = ADO_wake_up_iberian_workers
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_send_diplomatic_mission_to_spain
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_side_with_the_spanish_republicans
+
+		prerequisite = {
+			focus = ADO_side_with_the_spanish_republicans
+		}
+
+		mutually_exclusive = {
+			focus = ADO_free_territory_of_the_valleys_of_andorra
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_send_them_help
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_send_diplomatic_mission_to_spain
+
+		prerequisite = {
+			focus = ADO_send_diplomatic_mission_to_spain
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_intervetion_into_spain
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 2
+
+		relative_position_id = ADO_send_them_help
+
+		prerequisite = {
+			focus = ADO_unite_under_anarchist_ideas
+			focus = ADO_send_them_help
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_demand_workers_rights
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_side_with_the_spanish_republicans
+
+		prerequisite = {
+			focus = ADO_side_with_the_spanish_republicans
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_call_people_to_arms
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 4
+		y = 1
+
+		relative_position_id = ADO_side_with_the_spanish_republicans
+
+		prerequisite = {
+			focus = ADO_side_with_the_spanish_republicans
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_agrarian_collectivization
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_call_people_to_arms
+
+		prerequisite = {
+			focus = ADO_call_people_to_arms
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_nationalize_industry
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_call_people_to_arms
+
+		prerequisite = {
+			focus = ADO_call_people_to_arms
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_literacy_programs
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_agrarian_collectivization
+
+		prerequisite = {
+			focus = ADO_agrarian_collectivization
+		}
+		prerequisite = {
+			focus = ADO_nationalize_industry
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_third_anddorran_revolution
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_demand_workers_rights
+
+		prerequisite = {
+			focus = ADO_demand_workers_rights
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_strenghten_communist_party
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_third_anddorran_revolution
+
+		prerequisite = {
+			focus = ADO_third_anddorran_revolution
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_communist_constitution
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_strenghten_communist_party
+
+		prerequisite = {
+			focus = ADO_strenghten_communist_party
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_join_comintern
+
+		icon = GFX_focus_generic_join_comintern
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_communist_constitution
+
+		prerequisite = {
+			focus = ADO_communist_constitution
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_anti_fascism
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 4
+		y = 1
+
+		relative_position_id = ADO_popular_front_block
+
+		prerequisite = {
+			focus = ADO_popular_front_block
+			focus = ADO_join_comintern
+		}
+		prerequisite = {
+			focus = ADO_intervetion_into_spain
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_announce_new_reforms
+
+		icon = GFX_goal_support_democracy
+
+		x = 4
+		y = 1
+
+		relative_position_id = ADO_ensure_diplomatic_stability
+
+		prerequisite = {
+			focus = ADO_ensure_diplomatic_stability
+		}
+		prerequisite = {
+			focus = ADO_enforce_border_security
+		}
+
+		mutually_exclusive = {
+			focus = ADO_maintain_strict_neutrality
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_strenghten_the_general_coucil
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_announce_new_reforms
+
+		prerequisite = {
+			focus = ADO_announce_new_reforms
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_reduce_role_of_co_princes
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_announce_new_reforms
+
+		prerequisite = {
+			focus = ADO_announce_new_reforms
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_secularisation_of_the_country
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_strenghten_the_general_coucil
+
+		prerequisite = {
+			focus = ADO_strenghten_the_general_coucil
+		}
+		prerequisite = {
+			focus = ADO_reduce_role_of_co_princes
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_establish_higher_education
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_secularisation_of_the_country
+
+		prerequisite = {
+			focus = ADO_secularisation_of_the_country
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_womans_suffrage
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_reduce_role_of_co_princes
+
+		prerequisite = {
+			focus = ADO_strenghten_the_general_coucil
+		}
+		prerequisite = {
+			focus = ADO_reduce_role_of_co_princes
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_adopt_constitution
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_womans_suffrage
+
+		prerequisite = {
+			focus = ADO_secularisation_of_the_country
+		}
+		prerequisite = {
+			focus = ADO_womans_suffrage
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_diplomatic_affairs
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_establish_higher_education
+
+		prerequisite = {
+			focus = ADO_establish_higher_education
+		}
+		prerequisite = {
+			focus = ADO_adopt_constitution
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_join_allies
+
+		icon = GFX_focus_chi_british_cooperation
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_diplomatic_affairs
+
+		prerequisite = {
+			focus = ADO_diplomatic_affairs
+		}
+
+		mutually_exclusive = {
+			focus = ADO_formalize_defense_agreements
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_formalize_defense_agreements
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_diplomatic_affairs
+
+		prerequisite = {
+			focus = ADO_diplomatic_affairs
+		}
+
+		mutually_exclusive = {
+			focus = ADO_join_allies
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_legalize_parties
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_adopt_constitution
+
+		prerequisite = {
+			focus = ADO_adopt_constitution
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_proclaim_republic
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_legalize_parties
+
+		prerequisite = {
+			focus = ADO_legalize_parties
+		}
+
+		mutually_exclusive = {
+			focus = ADO_remain_co_principlaity
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_remain_co_principlaity
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_legalize_parties
+
+		prerequisite = {
+			focus = ADO_legalize_parties
+		}
+
+		mutually_exclusive = {
+			focus = ADO_proclaim_republic
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_andorran_dream
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_proclaim_republic
+
+		prerequisite = {
+			focus = ADO_proclaim_republic
+			focus = ADO_remain_co_principlaity
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_ensure_diplomatic_stability
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -2
+		y = 1
+
+		relative_position_id = ADO_the_dual_rule
+
+		prerequisite = {
+			focus = ADO_the_dual_rule
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_enforce_border_security
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_the_dual_rule
+		
+		prerequisite = {
+			focus = ADO_the_dual_rule
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	## Historical Branch ##
+
+	focus = {
+		id = ADO_maintain_strict_neutrality
+
+		icon = GFX_goal_generic_neutrality_focus
+
+		x = -5
+		y = 1
+
+		relative_position_id = ADO_ensure_diplomatic_stability
+
+		prerequisite = {
+			focus = ADO_ensure_diplomatic_stability
+		}
+		prerequisite = {
+			focus = ADO_enforce_border_security
+		}
+
+		mutually_exclusive = {
+			focus = ADO_announce_new_reforms
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_help_refugees
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_maintain_strict_neutrality
+
+		prerequisite = {
+			focus = ADO_maintain_strict_neutrality
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_maitain_order_within_principality
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_help_refugees
+
+		prerequisite = {
+			focus = ADO_help_refugees
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_andorra_national_library_extension
+
+		icon = GFX_focus_research
+
+		x = -1
+		y = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		relative_position_id = ADO_maitain_order_within_principality
+
+		prerequisite = {
+			focus = ADO_maitain_order_within_principality
+		}
+
+		cost = 10
+
+		available = {
+			if = {
+				limit = { amount_research_slots > 2 }
+				num_of_factories > 5
+			}
+			amount_research_slots < 5
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_condemn_spanish_anticlericalism
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_maintain_strict_neutrality
+
+		prerequisite = {
+			focus = ADO_maintain_strict_neutrality
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_collective_letter_of_the_spanish_bishops
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_condemn_spanish_anticlericalism
+
+		prerequisite = {
+			focus = ADO_condemn_spanish_anticlericalism
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_revise_our_flag
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 3
+		y = 1
+
+		relative_position_id = ADO_maitain_order_within_principality
+
+		prerequisite = {
+			focus = ADO_maitain_order_within_principality
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			set_cosmetic_tag = ADO_NEW
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_radio_andorra
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_maitain_order_within_principality
+
+		prerequisite = {
+			focus = ADO_maitain_order_within_principality
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_suspend_universal_man_suffrage
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -1
+		y = 1
+
+		relative_position_id = ADO_andorra_national_library_extension
+
+		prerequisite = {
+			focus = ADO_andorra_national_library_extension
+		}
+		prerequisite = {
+			focus = ADO_radio_andorra
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_smuggling_campaing
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_radio_andorra
+
+		prerequisite = {
+			focus = ADO_radio_andorra
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_catholic_state
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_revise_our_flag
+
+		prerequisite = {
+			focus = ADO_collective_letter_of_the_spanish_bishops
+		}
+		prerequisite = {
+			focus = ADO_revise_our_flag
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_promote_bucolism_and_idealism
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_smuggling_campaing
+
+		prerequisite = {
+			focus = ADO_smuggling_campaing
+		}
+		prerequisite = {
+			focus = ADO_catholic_state
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_negotiate_with_germany
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_suspend_universal_man_suffrage
+
+		prerequisite = {
+			focus = ADO_suspend_universal_man_suffrage
+			focus = ADO_smuggling_campaing
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_virtus_unita_fortior
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 1
+		y = 1
+
+		relative_position_id = ADO_negotiate_with_germany
+
+		prerequisite = {
+			focus = ADO_negotiate_with_germany
+		}
+		prerequisite = {
+			focus = ADO_promote_bucolism_and_idealism
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_question_the_co_princes
+
+		icon = GFX_goal_tfv_sever_ties_with_uk
+
+		x = 22
+		y = 0
+
+		relative_position_id = ADO_preserve_the_co_principality
+
+		mutually_exclusive = {
+			focus = ADO_preserve_the_co_principality
+		}
+
+		cost = 10
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			add_stability = -0.05
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_renounce_the_pareages
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_question_the_co_princes
+
+		prerequisite = {
+			focus = ADO_question_the_co_princes
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_no_more_gold_no_more_hams # NO WAY THEY WILL RECEIVE ANYTHING FROM US!
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -2
+		y = 1
+
+		relative_position_id = ADO_renounce_the_pareages
+
+		prerequisite = {
+			focus = ADO_renounce_the_pareages
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_expel_french_gendarmes
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 2
+		y = 1
+
+		relative_position_id = ADO_renounce_the_pareages
+
+		prerequisite = {
+			focus = ADO_renounce_the_pareages
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_aragon
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	## Fascist Branch ##
+
+	## Crown of Aragon Branch ##
+
+	## Army Branch ##
+
+	focus = {
+		id = ADO_andorran_military
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 17
+		y = 0
+
+		relative_position_id = ADO_question_the_co_princes
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_the_andorran_army
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = -4
+		y = 1
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_light_aircraft_focus
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 50
+		y = 3
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_tactical_bombers
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 50
+		y = 4
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_cas
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 50
+		y = 5
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_focus_on_bombers
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 29
+		y = 2
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_advanced_aircraft_focus
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 29
+		y = 3
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_jet_research
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 29
+		y = 4
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_the_andorran_air_force
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 0
+		y = 1
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_sometent # all men into army
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 32
+		y = 2
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_police_corps_of_andorra
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 31
+		y = 3
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_andorran_artillery
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 31
+		y = 4
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
+
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_advanced_artillery
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 31
+		y = 5
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_mountain_bonus
+		icon = GFX_focus_SMB_special_forces_option_1
+
+		x = 31
+		y = 6
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_standardization
+		icon = GFX_focus_SMB_special_forces_option_1
+
+		x = 31
+		y = 7
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_paratroopers
+		icon = GFX_focus_SMB_special_forces_option_1
+
+		x = 31
+		y = 8
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_andorran_special_forces
+		icon = GFX_focus_SMB_special_forces_option_1
+
+		x = 33
+		y = 7
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_doctrine_studies
+		icon = GFX_focus_SMB_special_forces_option_1
+
+		x = 33
+		y = 6
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_military_vehicles
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 33
+		y = 3
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_armor_focus
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 33
+		y = 4
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_mechanized_focus
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 33
+		y = 5
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_sea_access
+
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 4
+		y = 1
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+
+		completion_reward = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_new_shipyards
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 35
+		y = 2
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_submarine_effort
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 35
+		y = 3
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_carrier_effort
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 35
+		y = 4
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_battleship_effort
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 35
+		y = 5
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_establish_naval_bases
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 35
+		y = 6
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_our_sea
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 35
+		y = 7
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_fortify_the_coast
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 37
+		y = 6
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_merchant_fleet
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 37
+		y = 2
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_cruiser_effort
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 37
+		y = 3
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_air_naval_research
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 37
+		y = 5
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_andorran_marine_corps
+		icon = GFX_goal_generic_army_doctrines
+
+		x = 37
+		y = 4
+
+		relative_position_id = ADO_andorran_military
+
+		prerequisite = {
+			focus = ADO_andorran_military
+		}
+
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}

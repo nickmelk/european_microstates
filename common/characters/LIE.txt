@@ -7,7 +7,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = conservatism
+			ideology = despotism
 			expire = "1938.7.25"
 		}
 	}
@@ -19,7 +19,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = conservatism
+			ideology = despotism
 			expire = "1989.11.13"
 		}
 	}

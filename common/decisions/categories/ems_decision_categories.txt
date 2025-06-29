@@ -5,15 +5,15 @@ invite_foreign_volunteers_cat = {
 
 	priority = 5
 
-	allowed = {
-		OR = {
-			original_tag = ADO
-			original_tag = LIE
-			original_tag = MCO
-			original_tag = SMR
-			original_tag = VAT
-		}
-	}
+	# allowed = {
+	# 	OR = {
+	# 		original_tag = ADO
+	# 		original_tag = LIE
+	# 		original_tag = MCO
+	# 		original_tag = SMR
+	# 		original_tag = VAT
+	# 	}
+	# }
 
 	visible = {
 		#has_completed_focus = BALTIC_influence_neighbours
@@ -26,9 +26,9 @@ ADO_balance_of_power_category = {
 
 	priority = 90
 	
-	allowed = {
-		original_tag = ADO
-	}
+	# allowed = {
+	# 	original_tag = ADO
+	# }
 	
 	visible = { }
 }

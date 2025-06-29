@@ -2,7 +2,7 @@ invite_foreign_volunteers_cat = {
 	invite_volunteers_from_europe = {
 		icon = eng_propaganda_campaigns
 
-		cost = 50
+		cost = 25
 
 		available = {
 			is_microstate = yes
@@ -91,7 +91,7 @@ invite_foreign_volunteers_cat = {
 	invite_volunteers_from_north_america = {
 		icon = eng_propaganda_campaigns
 
-		cost = 50
+		cost = 25
 
 		available = {
 			is_microstate = yes
@@ -180,7 +180,7 @@ invite_foreign_volunteers_cat = {
 	invite_volunteers_from_south_america = {
 		icon = eng_propaganda_campaigns
 
-		cost = 50
+		cost = 25
 
 		available = {
 			is_microstate = yes
@@ -269,7 +269,7 @@ invite_foreign_volunteers_cat = {
 	invite_volunteers_from_australia = {
 		icon = eng_propaganda_campaigns
 
-		cost = 50
+		cost = 25
 
 		available = {
 			is_microstate = yes
@@ -358,7 +358,7 @@ invite_foreign_volunteers_cat = {
 	invite_volunteers_from_africa = {
 		icon = eng_propaganda_campaigns
 
-		cost = 50
+		cost = 25
 
 		available = {
 			is_microstate = yes
@@ -447,7 +447,7 @@ invite_foreign_volunteers_cat = {
 	invite_volunteers_from_asia = {
 		icon = eng_propaganda_campaigns
 
-		cost = 50
+		cost = 25
 
 		available = {
 			is_microstate = yes
@@ -536,7 +536,7 @@ invite_foreign_volunteers_cat = {
 	invite_volunteers_from_middle_east = {
 		icon = eng_propaganda_campaigns
 
-		cost = 50
+		cost = 25
 
 		available = {
 			is_microstate = yes

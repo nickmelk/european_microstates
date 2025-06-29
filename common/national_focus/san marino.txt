@@ -1,0 +1,18 @@
+focus_tree = {
+	id = sammarinese_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SMR
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	initial_show_position = { x = 36 y = 0 }
+}

@@ -776,17 +776,17 @@ bookmarks = {
 				PER_fight_for_iran
 			}
 		}
-		ADO = {
-			minor = yes
-			history = "ADO_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				ADO_limited_sovereignty
-				ADO_agrarian_society
-				ADO_political_instability
-			}
-			focuses = {	}
-		}
+		# ADO = {
+		# 	minor = yes
+		# 	history = "ADO_BLITZKRIEG_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		ADO_limited_sovereignty
+		# 		ADO_agrarian_society
+		# 		ADO_political_instability
+		# 	}
+		# 	focuses = {	}
+		# }
 		effect = {
 			randomize_weather = 12345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

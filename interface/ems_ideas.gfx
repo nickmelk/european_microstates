@@ -3,4 +3,9 @@ spriteTypes = {
 		name = "GFX_idea_ado_limited_sovereignty"
 		texturefile = "gfx/interface/ideas/idea_ado_limited_sovereignty.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_idea_ado_andorran_peseta"
+		texturefile = "gfx/interface/ideas/idea_ado_andorran_peseta.dds"
+	}
 }
