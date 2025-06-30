@@ -8,4 +8,9 @@ spriteTypes = {
 		name = "GFX_idea_ado_andorran_peseta"
 		texturefile = "gfx/interface/ideas/idea_ado_andorran_peseta.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_idea_ado_fhasa"
+		texturefile = "gfx/interface/ideas/idea_ado_fhasa.dds"
+	}
 }

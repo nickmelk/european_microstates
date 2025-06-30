@@ -1,41 +1,4 @@
 	focus = {
-		id = ADO_fhasa_expansion
-
-		icon = GFX_goal_generic_construct_civ_factory
-
-		x = 0
-		y = 1
-
-		relative_position_id = ADO_andorran_peseta
-
-		prerequisite = {
-			focus = ADO_andorran_peseta
-		}
-
-		cost = 10
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-		complete_tooltip = {
-
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
 		id = ADO_country_modernisation
 
 		icon = GFX_focus_generic_hydroelectric_energy
@@ -2991,41 +2954,6 @@
 
 		completion_reward = {
 			set_cosmetic_tag = ADO_aragon
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = ADO_andorra_national_library_extension
-
-		icon = GFX_focus_research
-
-		x = -1
-		y = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		relative_position_id = ADO_maitain_order_within_principality
-
-		prerequisite = {
-			focus = ADO_maitain_order_within_principality
-		}
-
-		cost = 10
-
-		available = {
-			if = {
-				limit = { amount_research_slots > 2 }
-				num_of_factories > 5
-			}
-			amount_research_slots < 5
-		}
-
-		completion_reward = {
-			add_research_slot = 1
 		}
 
 		ai_will_do = {

@@ -76,7 +76,7 @@ focus_tree = {
 		x = -3
 		y = 1
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 
 		relative_position_id = ADO_asphalt_revolution
 
@@ -108,6 +108,82 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ADO_andorran_peseta
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_expand_the_fhasa
+
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = 0
+		y = 1
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		relative_position_id = ADO_issue_the_andorran_peseta
+
+		prerequisite = {
+			focus = ADO_issue_the_andorran_peseta
+		}
+
+		cost = 10
+
+		available = {
+			has_idea = ADO_idea_fhasa
+			1017 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			1017 = {
+				NOT = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+
+		completion_reward = {
+			1017 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ADO_expand_the_biblioteca_nacional_d_andorra
+
+		icon = GFX_focus_research
+
+		x = 2
+		y = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		relative_position_id = ADO_expand_the_fhasa
+
+		prerequisite = {
+			focus = ADO_expand_the_fhasa
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_research_slot = 1
 		}
 
 		ai_will_do = {
