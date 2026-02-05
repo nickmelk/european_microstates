@@ -1,37 +1,45 @@
-﻿capital = 1018
+﻿capital = 1048
 
 oob = "LIE_1936"
 
-set_war_support = 0.1
-set_stability = 0.8
-
-# Starting tech
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	gw_artillery = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
 	tech_support = 1
 	tech_engineers = 1
 	basic_train = 1
+	gw_artillery = 1
 }
 
 if = {
 	limit = {
-		NOT = { has_dlc = "By Blood Alone" }
+		has_dlc = "By Blood Alone"
 	}
 	set_technology = {
-		early_fighter = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		aircraft_construction = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
 	}
 }
 
 give_guarantee = SWI
 
+recruit_character = LIE_otto_schaedler
+recruit_character = LIE_alfons_goop
 recruit_character = LIE_franz_i
 recruit_character = LIE_franz_joseph_ii
-recruit_character = LIE_paul_hasler
-recruit_character = LIE_macro_frick
 
 1939.1.1 = {
+	set_cosmetic_tag = LIE_NEW
+
 	add_political_power = 1198
 	add_command_power = 100
 	
@@ -53,29 +61,18 @@ recruit_character = LIE_macro_frick
 		tech_recon = 1
 		interwar_artillery = 1
 		interwar_antiair = 1
-		
-		#doctrines
-		air_superiority = 1
-		
-		mass_assault = 1
-		pocket_defence = 1
-		defence_in_depth = 1
 
-		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
-		radio_detection = 1
 		mechanical_computing = 1
-
-		#industry
 		basic_machine_tools = 1
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
 		fuel_silos = 1
 		construction1 = 1
 		construction2 = 1
-		concentrated_industry = 1
-		concentrated_industry2 = 1
 	}
 	
 	if = {
@@ -86,26 +83,40 @@ recruit_character = LIE_macro_frick
 			fighter1 = 1
 		}
 	}
+
+	complete_special_project = {
+		project = sp:sp_air_radar
+	}
+
+	set_grand_doctrine = grand_battleplan
+	set_grand_doctrine = new_strategic_destruction
 }
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1929.2.11"
+	last_election = "1932.3.13"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_popularities = {
-	neutrality = 100
+	neutrality = 87
+	democratic = 13
 }
 
 1939.1.1 = {
 	set_politics = {
-		ruling_party = democratic
-		last_election = "1938.7.25"
+		ruling_party = neutrality
+		last_election = "1936.2.16"
 		election_frequency = 48
-		elections_allowed = no
+		elections_allowed = yes
 	}
-	promote_character = LIE_franz_joseph_ii
+
+	set_popularities = {
+		neutrality = 73
+		democratic = 27
+	}
+
 	retire_character = LIE_franz_i
+	promote_character = LIE_franz_joseph_ii
 }

@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Public Force"
+	name = "Compagnia uniformata delle milizie"
 	division_names_group = SMR_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }

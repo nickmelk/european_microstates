@@ -1,5 +1,7 @@
 ﻿capital = 85 #Danzig
 
+oob = "DNZ_1936"
+
 set_research_slots = 3
 
 # Starting tech
@@ -15,9 +17,11 @@ set_technology = {
 	motorised_infantry = 1
 	paratroopers = 1
 	gw_artillery = 1
-	mass_assault = 1
-	fleet_in_being = 1
 }
+
+set_grand_doctrine = new_mobile_warfare
+set_grand_doctrine = new_convoy_raiding
+
 if = {
 	limit = {
 		NOT = { has_dlc = "By Blood Alone" }
@@ -85,10 +89,6 @@ if = {
 		basic_battery = 1
 		basic_torpedo = 1
 	}
-}
-
-85 = {
-	add_dynamic_modifier = { modifier = international_city }
 }
 
 set_politics = {

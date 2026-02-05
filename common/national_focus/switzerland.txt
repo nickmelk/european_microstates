@@ -5282,7 +5282,7 @@
 				target = LIE
 				transfer_troops = yes
 			}
-			1018 = {
+			1048 = {
 				if = {
 					limit = {
 						free_building_slots = {
@@ -6159,7 +6159,11 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			create_faction = SWI_neutral_entente_faction
+			create_faction_from_template = {
+				template = faction_template_industrial_focus
+				name = SWI_neutral_entente_faction
+				icon = GFX_faction_logo_generic_democratic
+			}
 			unlock_decision_tooltip =  SWI_invite_to_entente
 		}
 	}

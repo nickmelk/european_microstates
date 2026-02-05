@@ -1,4 +1,4 @@
-version="1.0"
+version="1.0.5"
 tags={
 	"Alternative History"
 	"Map"
@@ -11,5 +11,5 @@ tags={
 }
 picture="thumbnail.png"
 name="European Microstates"
-supported_version="1.16.*"
+supported_version="1.17.*"
 remote_file_id="2922265677"

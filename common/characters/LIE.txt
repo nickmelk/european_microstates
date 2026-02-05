@@ -1,50 +1,50 @@
 characters = {
-	LIE_franz_i = {
-		name = "Franz I"
+	LIE_otto_schaedler = {
+		name = LIE_otto_schaedler
 		portraits = {
 			civilian = {
-				large = GFX_Portrait_Europe_Generic_4
+				large = GFX_portrait_LIE_otto_schaedler
 			}
 		}
 		country_leader = {
-			ideology = despotism
-			expire = "1938.7.25"
+			ideology = conservatism
+			expire = "1965.1.1"
 		}
 	}
-	LIE_franz_joseph_ii = {
-		name = "Franz Joseph II"
+	LIE_alfons_goop = {
+		name = LIE_alfons_goop
 		portraits = {
 			civilian = {
-				large = GFX_Portrait_Europe_Generic_5
-			}
-		}
-		country_leader = {
-			ideology = despotism
-			expire = "1989.11.13"
-		}
-	}
-	LIE_paul_hasler = {
-		name = "Paul Hasler"
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_Europe_Generic_1
-			}
-		}
-		country_leader = {
-			ideology = marxism
-			expire = "1950.1.1"
-		}
-	}
-	LIE_macro_frick = {
-		name = "Macro Frick"
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_Europe_Generic_3
+				large = GFX_portrait_LIE_alfons_goop
 			}
 		}
 		country_leader = {
 			ideology = nazism
-			expire = "1950.1.1"
+			expire = "1965.1.1"
+		}
+	}
+	LIE_franz_i = {
+		name = LIE_franz_i
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LIE_franz_i
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1"
+		}
+	}
+	LIE_franz_joseph_ii = {
+		name = LIE_franz_joseph_ii
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LIE_franz_joseph_ii
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1"
 		}
 	}
 }

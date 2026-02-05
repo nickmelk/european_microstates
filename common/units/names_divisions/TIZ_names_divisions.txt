@@ -1,0 +1,298 @@
+﻿TIZ_INF_01 = 
+{
+	name = "Infantry Division"
+
+	for_countries = { TIZ }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { TIZ_INF_01 }
+
+	fallback_name = "%dème Division d'Infanterie"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Division d'Infanterie" }
+		2 = { "%dème Division d'Infanterie" }
+		3 = { "%dème Division d'Infanterie" }
+		4 = { "%dème Division d'Infanterie" }
+		5 = { "%dème Division d'Infanterie" }
+		6 = { "%dème Division d'Infanterie" }
+		7 = { "%dème Division d'Infanterie" }
+		8 = { "%dème Division d'Infanterie" }
+		9 = { "%dème Division d'Infanterie" }
+		10 = { "%dème Division d'Infanterie" }
+		11 = { "%dème Division d'Infanterie" }
+		12 = { "%dème Division d'Infanterie" }
+		13 = { "%dème Division d'Infanterie" }
+		14 = { "%dème Division d'Infanterie" }
+		15 = { "%dème Division d'Infanterie" }
+		16 = { "%dème Division d'Infanterie" }
+		17 = { "%dème Division d'Infanterie" }
+		18 = { "%dème Division d'Infanterie" }
+		19 = { "%dème Division d'Infanterie" }
+		20 = { "%dème Division d'Infanterie" }
+	}
+}
+
+TIZ_CAV_01 = 
+{
+	name = "Cavalry Division"
+
+	for_countries = { TIZ }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { TIZ_INF_01 }
+
+	fallback_name = "%dème Division de Cavalerie"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Division de Cavalerie" }
+		2 = { "%dème Division de Cavalerie" }
+		3 = { "%dème Division de Cavalerie" }
+		4 = { "%dème Division de Cavalerie" }
+		5 = { "%dème Division de Cavalerie" }
+		6 = { "%dème Division de Cavalerie" }
+		7 = { "%dème Division de Cavalerie" }
+		8 = { "%dème Division de Cavalerie" }
+		9 = { "%dème Division de Cavalerie" }
+		10 = { "%dème Division de Cavalerie" }
+	}
+}
+
+TIZ_MOT_01 = 
+{
+	name = "Motorized Division"
+
+	for_countries = { TIZ }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { TIZ_INF_01 }
+
+	fallback_name = "%dème Div. d'Infanterie Motorisée"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Div. d'Infanterie Motorisée" }
+		2 = { "%dème Div. d'Infanterie Motorisée" }
+		3 = { "%dème Div. d'Infanterie Motorisée" }
+		4 = { "%dème Div. d'Infanterie Motorisée" }
+		5 = { "%dème Div. d'Infanterie Motorisée" }
+		6 = { "%dème Div. d'Infanterie Motorisée" }
+		7 = { "%dème Div. d'Infanterie Motorisée" }
+		8 = { "%dème Div. d'Infanterie Motorisée" }
+		9 = { "%dème Div. d'Infanterie Motorisée" }
+		10 = { "%dème Div. d'Infanterie Motorisée" }
+	}
+}
+
+TIZ_MEC_01 = 
+{
+	name = "Mechanized Division"
+
+	for_countries = { TIZ }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { TIZ_CAV_01 }
+
+	fallback_name = "%dème Division Mécanique"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Division Mécanique" }
+		2 = { "%dème Division Mécanique" }
+		3 = { "%dème Division Mécanique" }
+		4 = { "%dème Division Mécanique" }
+		5 = { "%dème Division Mécanique" }
+		6 = { "%dème Division Mécanique" }
+		7 = { "%dème Division Mécanique" }
+		8 = { "%dème Division Mécanique" }
+		9 = { "%dème Division Mécanique" }
+		10 = { "%dème Division Mécanique" }
+	}
+}
+
+TIZ_ARM_01 = 
+{
+	name = "Armored Division"
+
+	for_countries = { TIZ }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { TIZ_INF_01 }
+
+	fallback_name = "%dème Division Cuirassée"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Division Cuirassée" }
+		2 = { "%dème Division Cuirassée" }
+		3 = { "%dème Division Cuirassée" }
+		4 = { "%dème Division Cuirassée" }
+		5 = { "%dème Division Cuirassée" }
+		6 = { "%dème Division Cuirassée" }
+		7 = { "%dème Division Cuirassée" }
+		8 = { "%dème Division Cuirassée" }
+		9 = { "%dème Division Cuirassée" }
+		10 = { "%dème Division Cuirassée" }
+	}
+}
+
+TIZ_PAR_01 = 
+{
+	name = "Paratrooper Division"
+
+	for_countries = { TIZ }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { TIZ_INF_01 }
+
+	fallback_name = "%dème Division Parachutiste"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Division Parachutiste" }
+		2 = { "%dème Division Parachutiste" }
+		3 = { "%dème Division Parachutiste" }
+		4 = { "%dème Division Parachutiste" }
+		5 = { "%dème Division Parachutiste" }
+		6 = { "%dème Division Parachutiste" }
+		7 = { "%dème Division Parachutiste" }
+		8 = { "%dème Division Parachutiste" }
+		9 = { "%dème Division Parachutiste" }
+		10 = { "%dème Division Parachutiste" }
+	}
+}
+
+TIZ_MAR_01 = 
+{
+	name = "Marine Division"
+
+	for_countries = { TIZ }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { TIZ_INF_01 }
+
+	fallback_name = "%dème Div. d'Infanterie de Marine"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Div. d'Infanterie de Marine" }
+		2 = { "%dème Div. d'Infanterie de Marine" }
+		3 = { "%dème Div. d'Infanterie de Marine" }
+		4 = { "%dème Div. d'Infanterie de Marine" }
+		5 = { "%dème Div. d'Infanterie de Marine" }
+		6 = { "%dème Div. d'Infanterie de Marine" }
+		7 = { "%dème Div. d'Infanterie de Marine" }
+		8 = { "%dème Div. d'Infanterie de Marine" }
+		9 = { "%dème Div. d'Infanterie de Marine" }
+		10 = { "%dème Div. d'Infanterie de Marine" }
+	}
+}
+
+TIZ_MNT_01 = 
+{
+	name = "Mountain Division"
+
+	for_countries = { TIZ }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { TIZ_INF_01 }
+
+	fallback_name = "%dème Division d'Infanterie Alpine"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Division d'Infanterie Alpine" }
+		2 = { "%dème Division d'Infanterie Alpine" }
+		3 = { "%dème Division d'Infanterie Alpine" }
+		4 = { "%dème Division d'Infanterie Alpine" }
+		5 = { "%dème Division d'Infanterie Alpine" }
+		6 = { "%dème Division d'Infanterie Alpine" }
+		7 = { "%dème Division d'Infanterie Alpine" }
+		8 = { "%dème Division d'Infanterie Alpine" }
+		9 = { "%dème Division d'Infanterie Alpine" }
+		10 = { "%dème Division d'Infanterie Alpine" }
+	}
+}
+
+TIZ_GAR_01 = 
+{
+	name = "Garrison Division"
+
+	for_countries = { TIZ }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { TIZ_INF_01 }
+
+	fallback_name = "%dème Division de Forteresse"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Division de Forteresse" }
+		2 = { "%dème Division de Forteresse" }
+		3 = { "%dème Division de Forteresse" }
+		4 = { "%dème Division de Forteresse" }
+		5 = { "%dème Division de Forteresse" }
+		6 = { "%dème Division de Forteresse" }
+		7 = { "%dème Division de Forteresse" }
+		8 = { "%dème Division de Forteresse" }
+		9 = { "%dème Division de Forteresse" }
+		10 = { "%dème Division de Forteresse" }		
+	}
+}
+

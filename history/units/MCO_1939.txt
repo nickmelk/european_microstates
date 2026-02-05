@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Public Force"
+	name = "Corps des Carabiniers du Prince"
 	division_names_group = MCO_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }

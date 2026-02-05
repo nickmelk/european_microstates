@@ -1,30 +1,37 @@
-﻿capital = 1020
+﻿capital = 1050
 
 oob = "SMR_1936"
 
-set_war_support = 0.1
-set_stability = 0.8
-
-# Starting tech
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	gw_artillery = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
 	tech_support = 1
 	tech_engineers = 1
 	basic_train = 1
+	gw_artillery = 1
 }
 
 if = {
 	limit = {
-		NOT = { has_dlc = "By Blood Alone" }
+		has_dlc = "By Blood Alone"
 	}
 	set_technology = {
-		early_fighter = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		aircraft_construction = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
 	}
 }
 
-recruit_character = SMR_captains_regent
+recruit_character = SMR_gino_giacomini
+recruit_character = SMR_giuliano_gozi
 
 1939.1.1 = {
 	add_political_power = 1198
@@ -48,31 +55,20 @@ recruit_character = SMR_captains_regent
 		tech_recon = 1
 		interwar_artillery = 1
 		interwar_antiair = 1
-		
-		#doctrines
-		air_superiority = 1
-		
-		mass_assault = 1
-		pocket_defence = 1
-		defence_in_depth = 1
 
-		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
-		radio_detection = 1
 		mechanical_computing = 1
-
-		#industry
 		basic_machine_tools = 1
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
 		fuel_silos = 1
 		construction1 = 1
 		construction2 = 1
-		concentrated_industry = 1
-		concentrated_industry2 = 1
 	}
-	
+
 	if = {
 		limit = {
 			NOT = { has_dlc = "By Blood Alone" }
@@ -81,12 +77,19 @@ recruit_character = SMR_captains_regent
 			fighter1 = 1
 		}
 	}
+
+	complete_special_project = {
+		project = sp:sp_air_radar
+	}
+
+	set_grand_doctrine = grand_battleplan
+	set_grand_doctrine = new_strategic_destruction
 }
 
 set_politics = {
 	ruling_party = fascism
-	last_election = "1935.10.1"
-	election_frequency = 6
+	last_election = "1932.8.28"
+	election_frequency = 60
 	elections_allowed = no
 }
 
@@ -97,8 +100,8 @@ set_popularities = {
 1939.1.1 = {
 	set_politics = {
 		ruling_party = fascism
-		last_election = "1938.10.1"
-		election_frequency = 6
-		elections_allowed = yes
+		last_election = "1938.5.29"
+		election_frequency = 60
+		elections_allowed = no
 	}
 }

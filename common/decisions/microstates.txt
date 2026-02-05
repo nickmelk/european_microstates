@@ -1,3 +1,23 @@
+# by NickMelk
+
+# Decision system for inviting volunteers from different countries to microstates, allowing them to build some army.
+
+# The total number of volunteers from a specific continent is calculated using the following formula:
+
+# foreign_volunteers = SUM(THIS.manpower_k * 10 * THIS.party_popularity@[ideology])
+
+# ROOT is the country that takes a decision
+# THIS is a country from which manpower is taken
+
+# THIS.manpower_k is manpower in thousands
+# THIS.party_popularity@[ideology] is popularity of party, is the popularity of the political party, where ideology = ROOT.ruling_party
+# (so that countries that share the same ideology as ROOT will contribute more volunteers relative to their population
+# (e.g. a communist country will receive more volunteers from other communist countries))
+
+# The resulting value is subtracted from THIS country's manpower and added to foreign_volunteers.
+# This calculation is performed for each country on the continent that exists and is not at war (excluding ROOT).
+# In the end, foreign_volunteers is added to ROOT's manpower.
+
 invite_foreign_volunteers_cat = {
 	invite_volunteers_from_europe = {
 		icon = eng_propaganda_campaigns
@@ -13,17 +33,11 @@ invite_foreign_volunteers_cat = {
 			}
 		}
 
-		visible = {
-			# ROOT = {
-			# 	has_completed_focus = BALTIC_influence_neighbours
-			# }
-		}
+		visible = { }
 
 		fire_only_once = no
-
 		days_remove = 30
-
-		days_re_enable = 180
+		days_re_enable = 90
 
 		remove_effect = {
 			hidden_effect = {
@@ -33,46 +47,45 @@ invite_foreign_volunteers_cat = {
 					if = {
 						limit = {
 							exists = yes
-							has_war = no
-							NOT = { tag = PREV }
-							NOT = { has_war_with = PREV }
 							capital_scope = { is_on_continent = europe }
+							has_war = no
+							NOT = { tag = ROOT }
 						}
-						set_temp_variable = { country_volunteers = THIS.manpower_k }
-						multiply_temp_variable = { country_volunteers = 10 }
+						set_temp_variable = { volunteers_from_country = THIS.manpower_k }
+						multiply_temp_variable = { volunteers_from_country = 10 }
 						if = {
 							limit = {
-								PREV = { has_government = democratic }
+								ROOT = { has_government = democratic }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@democratic }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = communism }
+								ROOT = { has_government = communism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@communism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = fascism }
+								ROOT = { has_government = fascism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@fascism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = neutrality }
+								ROOT = { has_government = neutrality }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@neutrality }
 						}
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_manpower = var:country_volunteers
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_manpower = var:volunteers_from_country
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:volunteers_from_country }
 					}
 				}
 				add_manpower = var:foreign_volunteers
 			}
-			custom_effect_tooltip = ems_coming_volunteers_from_across_europe
+			custom_effect_tooltip = ems_volunteers_from_europe
 		}
 
 		ai_will_do = {
@@ -81,8 +94,8 @@ invite_foreign_volunteers_cat = {
 				add = 10
 				has_manpower < 10000
 				OR = {
-					NOT = { has_government = democratic }
-					NOT = { has_government = neutrality }
+					has_government = communism
+					has_government = fascism
 				}
 			}
 		}
@@ -102,17 +115,11 @@ invite_foreign_volunteers_cat = {
 			}
 		}
 
-		visible = {
-			# ROOT = {
-			# 	has_completed_focus = BALTIC_influence_neighbours
-			# }
-		}
+		visible = { }
 
 		fire_only_once = no
-
 		days_remove = 30
-
-		days_re_enable = 180
+		days_re_enable = 90
 
 		remove_effect = {
 			hidden_effect = {
@@ -122,46 +129,45 @@ invite_foreign_volunteers_cat = {
 					if = {
 						limit = {
 							exists = yes
-							has_war = no
-							NOT = { tag = PREV }
-							NOT = { has_war_with = PREV }
 							capital_scope = { is_on_continent = north_america }
+							has_war = no
+							NOT = { tag = ROOT }
 						}
-						set_temp_variable = { country_volunteers = THIS.manpower_k }
-						multiply_temp_variable = { country_volunteers = 10 }
+						set_temp_variable = { volunteers_from_country = THIS.manpower_k }
+						multiply_temp_variable = { volunteers_from_country = 10 }
 						if = {
 							limit = {
-								PREV = { has_government = democratic }
+								ROOT = { has_government = democratic }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@democratic }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = communism }
+								ROOT = { has_government = communism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@communism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = fascism }
+								ROOT = { has_government = fascism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@fascism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = neutrality }
+								ROOT = { has_government = neutrality }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@neutrality }
 						}
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_manpower = var:country_volunteers
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_manpower = var:volunteers_from_country
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:volunteers_from_country }
 					}
 				}
 				add_manpower = var:foreign_volunteers
 			}
-			custom_effect_tooltip = ems_coming_volunteers_from_across_north_america
+			custom_effect_tooltip = ems_volunteers_from_north_america
 		}
 
 		ai_will_do = {
@@ -170,8 +176,8 @@ invite_foreign_volunteers_cat = {
 				add = 10
 				has_manpower < 10000
 				OR = {
-					NOT = { has_government = democratic }
-					NOT = { has_government = neutrality }
+					has_government = communism
+					has_government = fascism
 				}
 			}
 		}
@@ -191,17 +197,11 @@ invite_foreign_volunteers_cat = {
 			}
 		}
 
-		visible = {
-			# ROOT = {
-			# 	has_completed_focus = BALTIC_influence_neighbours
-			# }
-		}
+		visible = { }
 
 		fire_only_once = no
-
 		days_remove = 30
-
-		days_re_enable = 180
+		days_re_enable = 90
 
 		remove_effect = {
 			hidden_effect = {
@@ -211,46 +211,45 @@ invite_foreign_volunteers_cat = {
 					if = {
 						limit = {
 							exists = yes
-							has_war = no
-							NOT = { tag = PREV }
-							NOT = { has_war_with = PREV }
 							capital_scope = { is_on_continent = south_america }
+							has_war = no
+							NOT = { tag = ROOT }
 						}
-						set_temp_variable = { country_volunteers = THIS.manpower_k }
-						multiply_temp_variable = { country_volunteers = 10 }
+						set_temp_variable = { volunteers_from_country = THIS.manpower_k }
+						multiply_temp_variable = { volunteers_from_country = 10 }
 						if = {
 							limit = {
-								PREV = { has_government = democratic }
+								ROOT = { has_government = democratic }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@democratic }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = communism }
+								ROOT = { has_government = communism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@communism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = fascism }
+								ROOT = { has_government = fascism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@fascism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = neutrality }
+								ROOT = { has_government = neutrality }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@neutrality }
 						}
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_manpower = var:country_volunteers
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_manpower = var:volunteers_from_country
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:volunteers_from_country }
 					}
 				}
 				add_manpower = var:foreign_volunteers
 			}
-			custom_effect_tooltip = ems_coming_volunteers_from_across_south_america
+			custom_effect_tooltip = ems_volunteers_from_south_america
 		}
 
 		ai_will_do = {
@@ -259,8 +258,8 @@ invite_foreign_volunteers_cat = {
 				add = 10
 				has_manpower < 10000
 				OR = {
-					NOT = { has_government = democratic }
-					NOT = { has_government = neutrality }
+					has_government = communism
+					has_government = fascism
 				}
 			}
 		}
@@ -280,17 +279,11 @@ invite_foreign_volunteers_cat = {
 			}
 		}
 
-		visible = {
-			# ROOT = {
-			# 	has_completed_focus = BALTIC_influence_neighbours
-			# }
-		}
+		visible = { }
 
 		fire_only_once = no
-
 		days_remove = 30
-
-		days_re_enable = 180
+		days_re_enable = 90
 
 		remove_effect = {
 			hidden_effect = {
@@ -300,46 +293,45 @@ invite_foreign_volunteers_cat = {
 					if = {
 						limit = {
 							exists = yes
-							has_war = no
-							NOT = { tag = PREV }
-							NOT = { has_war_with = PREV }
 							capital_scope = { is_on_continent = australia }
+							has_war = no
+							NOT = { tag = ROOT }
 						}
-						set_temp_variable = { country_volunteers = THIS.manpower_k }
-						multiply_temp_variable = { country_volunteers = 10 }
+						set_temp_variable = { volunteers_from_country = THIS.manpower_k }
+						multiply_temp_variable = { volunteers_from_country = 10 }
 						if = {
 							limit = {
-								PREV = { has_government = democratic }
+								ROOT = { has_government = democratic }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@democratic }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = communism }
+								ROOT = { has_government = communism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@communism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = fascism }
+								ROOT = { has_government = fascism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@fascism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = neutrality }
+								ROOT = { has_government = neutrality }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@neutrality }
 						}
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_manpower = var:country_volunteers
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_manpower = var:volunteers_from_country
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:volunteers_from_country }
 					}
 				}
 				add_manpower = var:foreign_volunteers
 			}
-			custom_effect_tooltip = ems_coming_volunteers_from_across_australia
+			custom_effect_tooltip = ems_volunteers_from_australia
 		}
 
 		ai_will_do = {
@@ -348,8 +340,8 @@ invite_foreign_volunteers_cat = {
 				add = 10
 				has_manpower < 10000
 				OR = {
-					NOT = { has_government = democratic }
-					NOT = { has_government = neutrality }
+					has_government = communism
+					has_government = fascism
 				}
 			}
 		}
@@ -369,17 +361,11 @@ invite_foreign_volunteers_cat = {
 			}
 		}
 
-		visible = {
-			# ROOT = {
-			# 	has_completed_focus = BALTIC_influence_neighbours
-			# }
-		}
+		visible = { }
 
 		fire_only_once = no
-
 		days_remove = 30
-
-		days_re_enable = 180
+		days_re_enable = 90
 
 		remove_effect = {
 			hidden_effect = {
@@ -389,46 +375,45 @@ invite_foreign_volunteers_cat = {
 					if = {
 						limit = {
 							exists = yes
-							has_war = no
-							NOT = { tag = PREV }
-							NOT = { has_war_with = PREV }
 							capital_scope = { is_on_continent = africa }
+							has_war = no
+							NOT = { tag = ROOT }
 						}
-						set_temp_variable = { country_volunteers = THIS.manpower_k }
-						multiply_temp_variable = { country_volunteers = 10 }
+						set_temp_variable = { volunteers_from_country = THIS.manpower_k }
+						multiply_temp_variable = { volunteers_from_country = 10 }
 						if = {
 							limit = {
-								PREV = { has_government = democratic }
+								ROOT = { has_government = democratic }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@democratic }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = communism }
+								ROOT = { has_government = communism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@communism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = fascism }
+								ROOT = { has_government = fascism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@fascism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = neutrality }
+								ROOT = { has_government = neutrality }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@neutrality }
 						}
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_manpower = var:country_volunteers
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_manpower = var:volunteers_from_country
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:volunteers_from_country }
 					}
 				}
 				add_manpower = var:foreign_volunteers
 			}
-			custom_effect_tooltip = ems_coming_volunteers_from_across_africa
+			custom_effect_tooltip = ems_volunteers_from_africa
 		}
 
 		ai_will_do = {
@@ -437,8 +422,8 @@ invite_foreign_volunteers_cat = {
 				add = 10
 				has_manpower < 10000
 				OR = {
-					NOT = { has_government = democratic }
-					NOT = { has_government = neutrality }
+					has_government = communism
+					has_government = fascism
 				}
 			}
 		}
@@ -458,17 +443,11 @@ invite_foreign_volunteers_cat = {
 			}
 		}
 
-		visible = {
-			# ROOT = {
-			# 	has_completed_focus = BALTIC_influence_neighbours
-			# }
-		}
+		visible = { }
 
 		fire_only_once = no
-
 		days_remove = 30
-
-		days_re_enable = 180
+		days_re_enable = 90
 
 		remove_effect = {
 			hidden_effect = {
@@ -478,46 +457,45 @@ invite_foreign_volunteers_cat = {
 					if = {
 						limit = {
 							exists = yes
-							has_war = no
-							NOT = { tag = PREV }
-							NOT = { has_war_with = PREV }
 							capital_scope = { is_on_continent = asia }
+							has_war = no
+							NOT = { tag = ROOT }
 						}
-						set_temp_variable = { country_volunteers = THIS.manpower_k }
-						multiply_temp_variable = { country_volunteers = 10 }
+						set_temp_variable = { volunteers_from_country = THIS.manpower_k }
+						multiply_temp_variable = { volunteers_from_country = 10 }
 						if = {
 							limit = {
-								PREV = { has_government = democratic }
+								ROOT = { has_government = democratic }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@democratic }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = communism }
+								ROOT = { has_government = communism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@communism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = fascism }
+								ROOT = { has_government = fascism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@fascism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = neutrality }
+								ROOT = { has_government = neutrality }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@neutrality }
 						}
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_manpower = var:country_volunteers
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_manpower = var:volunteers_from_country
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:volunteers_from_country }
 					}
 				}
 				add_manpower = var:foreign_volunteers
 			}
-			custom_effect_tooltip = ems_coming_volunteers_from_across_asia
+			custom_effect_tooltip = ems_volunteers_from_asia
 		}
 
 		ai_will_do = {
@@ -526,8 +504,8 @@ invite_foreign_volunteers_cat = {
 				add = 10
 				has_manpower < 10000
 				OR = {
-					NOT = { has_government = democratic }
-					NOT = { has_government = neutrality }
+					has_government = communism
+					has_government = fascism
 				}
 			}
 		}
@@ -547,17 +525,11 @@ invite_foreign_volunteers_cat = {
 			}
 		}
 
-		visible = {
-			# ROOT = {
-			# 	has_completed_focus = BALTIC_influence_neighbours
-			# }
-		}
+		visible = { }
 
 		fire_only_once = no
-
 		days_remove = 30
-
-		days_re_enable = 180
+		days_re_enable = 90
 
 		remove_effect = {
 			hidden_effect = {
@@ -567,46 +539,45 @@ invite_foreign_volunteers_cat = {
 					if = {
 						limit = {
 							exists = yes
-							has_war = no
-							NOT = { tag = PREV }
-							NOT = { has_war_with = PREV }
 							capital_scope = { is_on_continent = middle_east }
+							has_war = no
+							NOT = { tag = ROOT }
 						}
-						set_temp_variable = { country_volunteers = THIS.manpower_k }
-						multiply_temp_variable = { country_volunteers = 10 }
+						set_temp_variable = { volunteers_from_country = THIS.manpower_k }
+						multiply_temp_variable = { volunteers_from_country = 10 }
 						if = {
 							limit = {
-								PREV = { has_government = democratic }
+								ROOT = { has_government = democratic }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@democratic }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@democratic }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = communism }
+								ROOT = { has_government = communism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@communism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@communism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = fascism }
+								ROOT = { has_government = fascism }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@fascism }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@fascism }
 						}
 						else_if = {
 							limit = {
-								PREV = { has_government = neutrality }
+								ROOT = { has_government = neutrality }
 							}
-							multiply_temp_variable = { country_volunteers = THIS.party_popularity@neutrality }
+							multiply_temp_variable = { volunteers_from_country = THIS.party_popularity@neutrality }
 						}
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_manpower = var:country_volunteers
-						multiply_temp_variable = { country_volunteers = -1 }
-						add_to_temp_variable = { foreign_volunteers = var:country_volunteers }
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_manpower = var:volunteers_from_country
+						multiply_temp_variable = { volunteers_from_country = -1 }
+						add_to_temp_variable = { foreign_volunteers = var:volunteers_from_country }
 					}
 				}
 				add_manpower = var:foreign_volunteers
 			}
-			custom_effect_tooltip = ems_coming_volunteers_from_across_middle_east
+			custom_effect_tooltip = ems_volunteers_from_middle_east
 		}
 
 		ai_will_do = {
@@ -615,8 +586,8 @@ invite_foreign_volunteers_cat = {
 				add = 10
 				has_manpower < 10000
 				OR = {
-					NOT = { has_government = democratic }
-					NOT = { has_government = neutrality }
+					has_government = communism
+					has_government = fascism
 				}
 			}
 		}

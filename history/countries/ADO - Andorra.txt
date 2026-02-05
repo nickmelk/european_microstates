@@ -1,4 +1,4 @@
-﻿capital = 1017
+﻿capital = 1047
 
 oob = "ADO_1936"
 
@@ -30,20 +30,9 @@ if = {
 	}
 }
 
-# add_ideas = {
-# 	ADO_limited_sovereignty
-# 	ADO_agrarian_society
-# 	ADO_political_instability
-# 	neutrality_idea
-# }
-
 recruit_character = ADO_general_council
-recruit_character = ADO_anarchist_commune
 recruit_character = ADO_boris_i
-recruit_character = ADO_pere_torres
-recruit_character = ADO_francesc_molne_roge
 recruit_character = ADO_francesc_cairat_fleixes
-recruit_character = ADO_justi_guitart_i_vilardebo
 
 1939.1.1 = {
 	set_cosmetic_tag = ADO_NEW
@@ -51,9 +40,7 @@ recruit_character = ADO_justi_guitart_i_vilardebo
 	add_political_power = 1198
 	add_command_power = 100
 
-	# WIP Ideas
-	
-	# WIP Focuses
+	#generic focuses
 	complete_national_focus = army_effort
 	complete_national_focus = equipment_effort
 	complete_national_focus = motorization_effort
@@ -83,11 +70,6 @@ recruit_character = ADO_justi_guitart_i_vilardebo
 		fuel_silos = 1
 		construction1 = 1
 		construction2 = 1
-
-		mass_assault = 1
-		pocket_defence = 1
-		defence_in_depth = 1
-		air_superiority = 1
 	}
 
 	if = {
@@ -102,6 +84,9 @@ recruit_character = ADO_justi_guitart_i_vilardebo
 	complete_special_project = {
 		project = sp:sp_air_radar
 	}
+
+	set_grand_doctrine = grand_battleplan
+	set_grand_doctrine = new_strategic_destruction
 }
 
 set_politics = {
@@ -123,8 +108,4 @@ set_popularities = {
 		election_frequency = 24
 		elections_allowed = yes
 	}
-
-	promote_character = ADO_francesc_cairat_fleixes
-	retire_character = ADO_pere_torres
-	retire_character = ADO_francesc_molne_roge
 }

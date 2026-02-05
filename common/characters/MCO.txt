@@ -1,14 +1,14 @@
 characters = {
 	MCO_louis_ii = {
-		name = "Louis II"
+		name = MCO_louis_ii
 		portraits = {
 			civilian = {
-				large = GFX_Portrait_Europe_Generic_4
+				large = GFX_portrait_MCO_louis_ii
 			}
 		}
 		country_leader = {
 			ideology = despotism
-			expire = "1949.5.9"
+			expire = "1965.1.1"
 		}
 	}
 }

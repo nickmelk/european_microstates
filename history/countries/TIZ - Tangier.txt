@@ -1,32 +1,38 @@
-capital = 1022
+capital = 1052
 
-#oob = "TIZ_1936"
+oob = "TIZ_1936"
 
-set_war_support = 0.1
-set_stability = 0.8
-
-# Starting tech
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	gw_artillery = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
 	tech_support = 1
 	tech_engineers = 1
 	basic_train = 1
+	gw_artillery = 1
 }
 
 if = {
 	limit = {
-		NOT = { has_dlc = "By Blood Alone" }
+		has_dlc = "By Blood Alone"
 	}
 	set_technology = {
-		early_fighter = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		aircraft_construction = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
 	}
 }
 
 recruit_character = TIZ_pierre_le_fur
 
-1022 = {
+1052 = {
 	add_dynamic_modifier = { modifier = international_city }
 }
 
@@ -46,37 +52,26 @@ recruit_character = TIZ_pierre_le_fur
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
 	
-	#oob = "TIZ_1939"
+	oob = "TIZ_1939"
 	
 	set_technology = {
 		tech_recon = 1
 		interwar_artillery = 1
 		interwar_antiair = 1
-		
-		#doctrines
-		air_superiority = 1
-		
-		mass_assault = 1
-		pocket_defence = 1
-		defence_in_depth = 1
 
-		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
-		radio_detection = 1
 		mechanical_computing = 1
-
-		#industry
 		basic_machine_tools = 1
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
 		fuel_silos = 1
 		construction1 = 1
 		construction2 = 1
-		concentrated_industry = 1
-		concentrated_industry2 = 1
 	}
-	
+
 	if = {
 		limit = {
 			NOT = { has_dlc = "By Blood Alone" }
@@ -85,15 +80,32 @@ recruit_character = TIZ_pierre_le_fur
 			fighter1 = 1
 		}
 	}
+
+	complete_special_project = {
+		project = sp:sp_air_radar
+	}
+
+	set_grand_doctrine = grand_battleplan
+	set_grand_doctrine = new_strategic_destruction
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1929.8.19"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_popularities = {
-	neutrality = 100
+	democratic = 85
+	fascism = 11
+	neutrality = 4
+}
+
+1939.1.1 = {
+	set_popularities = {
+		democratic = 56
+		neutrality = 33
+		fascism = 11
+	}
 }

@@ -11,32 +11,32 @@
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { MCO_INF_01 }
 
-	fallback_name = "%d. Infanterie-Division"
+	fallback_name = "%dème Division d'Infanterie"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d. Infanterie-Division" }
-		2 = { "%d. Infanterie-Division" }
-		3 = { "%d. Infanterie-Division" }
-		4 = { "%d. Infanterie-Division" }
-		5 = { "%d. Infanterie-Division" }
-		6 = { "%d. Infanterie-Division" }
-		7 = { "%d. Infanterie-Division" }
-		8 = { "%d. Infanterie-Division" }
-		9 = { "%d. Infanterie-Division" }
-		10 = { "%d. Infanterie-Division" }
-		11 = { "%d. Infanterie-Division" }
-		12 = { "%d. Infanterie-Division" }
-		13 = { "%d. Infanterie-Division" }
-		14 = { "%d. Infanterie-Division" }
-		15 = { "%d. Infanterie-Division" }
-		16 = { "%d. Infanterie-Division" }
-		17 = { "%d. Infanterie-Division" }
-		18 = { "%d. Infanterie-Division" }
-		19 = { "%d. Infanterie-Division" }
-		20 = { "%d. Infanterie-Division" }
+		1 = { "%dère Division d'Infanterie" }
+		2 = { "%dème Division d'Infanterie" }
+		3 = { "%dème Division d'Infanterie" }
+		4 = { "%dème Division d'Infanterie" }
+		5 = { "%dème Division d'Infanterie" }
+		6 = { "%dème Division d'Infanterie" }
+		7 = { "%dème Division d'Infanterie" }
+		8 = { "%dème Division d'Infanterie" }
+		9 = { "%dème Division d'Infanterie" }
+		10 = { "%dème Division d'Infanterie" }
+		11 = { "%dème Division d'Infanterie" }
+		12 = { "%dème Division d'Infanterie" }
+		13 = { "%dème Division d'Infanterie" }
+		14 = { "%dème Division d'Infanterie" }
+		15 = { "%dème Division d'Infanterie" }
+		16 = { "%dème Division d'Infanterie" }
+		17 = { "%dème Division d'Infanterie" }
+		18 = { "%dème Division d'Infanterie" }
+		19 = { "%dème Division d'Infanterie" }
+		20 = { "%dème Division d'Infanterie" }
 	}
 }
 
@@ -53,22 +53,22 @@ MCO_CAV_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { MCO_INF_01 }
 
-	fallback_name = "%d. Schnelle Division"
+	fallback_name = "%dème Division de Cavalerie"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d. Schnelle Division" }
-		2 = { "%d. Schnelle Division" }
-		3 = { "%d. Schnelle Division" }
-		4 = { "%d. Schnelle Division" }
-		5 = { "%d. Schnelle Division" }
-		6 = { "%d. Schnelle Division" }
-		7 = { "%d. Schnelle Division" }
-		8 = { "%d. Schnelle Division" }
-		9 = { "%d. Schnelle Division" }
-		10 = { "%d. Schnelle Division" }
+		1 = { "%dère Division de Cavalerie" }
+		2 = { "%dème Division de Cavalerie" }
+		3 = { "%dème Division de Cavalerie" }
+		4 = { "%dème Division de Cavalerie" }
+		5 = { "%dème Division de Cavalerie" }
+		6 = { "%dème Division de Cavalerie" }
+		7 = { "%dème Division de Cavalerie" }
+		8 = { "%dème Division de Cavalerie" }
+		9 = { "%dème Division de Cavalerie" }
+		10 = { "%dème Division de Cavalerie" }
 	}
 }
 
@@ -85,22 +85,22 @@ MCO_MOT_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { MCO_INF_01 }
 
-	fallback_name = "%d. Kraftfahrjäger-Division"
+	fallback_name = "%dème Div. d'Infanterie Motorisée"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d. Kraftfahrjäger-Division" }
-		2 = { "%d. Kraftfahrjäger-Division" }
-		3 = { "%d. Kraftfahrjäger-Division" }
-		4 = { "%d. Kraftfahrjäger-Division" }
-		5 = { "%d. Kraftfahrjäger-Division" }
-		6 = { "%d. Kraftfahrjäger-Division" }
-		7 = { "%d. Kraftfahrjäger-Division" }
-		8 = { "%d. Kraftfahrjäger-Division" }
-		9 = { "%d. Kraftfahrjäger-Division" }
-		10 = { "%d. Kraftfahrjäger-Division" }
+		1 = { "%dère Div. d'Infanterie Motorisée" }
+		2 = { "%dème Div. d'Infanterie Motorisée" }
+		3 = { "%dème Div. d'Infanterie Motorisée" }
+		4 = { "%dème Div. d'Infanterie Motorisée" }
+		5 = { "%dème Div. d'Infanterie Motorisée" }
+		6 = { "%dème Div. d'Infanterie Motorisée" }
+		7 = { "%dème Div. d'Infanterie Motorisée" }
+		8 = { "%dème Div. d'Infanterie Motorisée" }
+		9 = { "%dème Div. d'Infanterie Motorisée" }
+		10 = { "%dème Div. d'Infanterie Motorisée" }
 	}
 }
 
@@ -117,22 +117,22 @@ MCO_MEC_01 =
 	# Number reservation system will tie to another group.
 	link_numbering_with = { MCO_CAV_01 }
 
-	fallback_name = "%d. Schnelle Division"
+	fallback_name = "%dème Division Mécanique"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d. Schnelle Division" }
-		2 = { "%d. Schnelle Division" }
-		3 = { "%d. Schnelle Division" }
-		4 = { "%d. Schnelle Division" }
-		5 = { "%d. Schnelle Division" }
-		6 = { "%d. Schnelle Division" }
-		7 = { "%d. Schnelle Division" }
-		8 = { "%d. Schnelle Division" }
-		9 = { "%d. Schnelle Division" }
-		10 = { "%d. Schnelle Division" }
+		1 = { "%dère Division Mécanique" }
+		2 = { "%dème Division Mécanique" }
+		3 = { "%dème Division Mécanique" }
+		4 = { "%dème Division Mécanique" }
+		5 = { "%dème Division Mécanique" }
+		6 = { "%dème Division Mécanique" }
+		7 = { "%dème Division Mécanique" }
+		8 = { "%dème Division Mécanique" }
+		9 = { "%dème Division Mécanique" }
+		10 = { "%dème Division Mécanique" }
 	}
 }
 
@@ -149,22 +149,22 @@ MCO_ARM_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { MCO_INF_01 }
 
-	fallback_name = "%d. Panzerwagen-Division"
+	fallback_name = "%dème Division Cuirassée"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d. Panzerwagen-Division" }
-		2 = { "%d. Panzerwagen-Division" }
-		3 = { "%d. Panzerwagen-Division" }
-		4 = { "%d. Panzerwagen-Division" }
-		5 = { "%d. Panzerwagen-Division" }
-		6 = { "%d. Panzerwagen-Division" }
-		7 = { "%d. Panzerwagen-Division" }
-		8 = { "%d. Panzerwagen-Division" }
-		9 = { "%d. Panzerwagen-Division" }
-		10 = { "%d. Panzerwagen-Division" }
+		1 = { "%dère Division Cuirassée" }
+		2 = { "%dème Division Cuirassée" }
+		3 = { "%dème Division Cuirassée" }
+		4 = { "%dème Division Cuirassée" }
+		5 = { "%dème Division Cuirassée" }
+		6 = { "%dème Division Cuirassée" }
+		7 = { "%dème Division Cuirassée" }
+		8 = { "%dème Division Cuirassée" }
+		9 = { "%dème Division Cuirassée" }
+		10 = { "%dème Division Cuirassée" }
 	}
 }
 
@@ -181,22 +181,22 @@ MCO_PAR_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { MCO_INF_01 }
 
-	fallback_name = "%d. Fallschirmjäger-Division"
+	fallback_name = "%dème Division Parachutiste"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d. Fallschirmjäger-Division" }
-		2 = { "%d. Fallschirmjäger-Division" }
-		3 = { "%d. Fallschirmjäger-Division" }
-		4 = { "%d. Fallschirmjäger-Division" }
-		5 = { "%d. Fallschirmjäger-Division" }
-		6 = { "%d. Fallschirmjäger-Division" }
-		7 = { "%d. Fallschirmjäger-Division" }
-		8 = { "%d. Fallschirmjäger-Division" }
-		9 = { "%d. Fallschirmjäger-Division" }
-		10 = { "%d. Fallschirmjäger-Division" }
+		1 = { "%dère Division Parachutiste" }
+		2 = { "%dème Division Parachutiste" }
+		3 = { "%dème Division Parachutiste" }
+		4 = { "%dème Division Parachutiste" }
+		5 = { "%dème Division Parachutiste" }
+		6 = { "%dème Division Parachutiste" }
+		7 = { "%dème Division Parachutiste" }
+		8 = { "%dème Division Parachutiste" }
+		9 = { "%dème Division Parachutiste" }
+		10 = { "%dème Division Parachutiste" }
 	}
 }
 
@@ -213,22 +213,22 @@ MCO_MAR_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { MCO_INF_01 }
 
-	fallback_name = "%d. Marine-Stürmdivision"
+	fallback_name = "%dème Div. d'Infanterie de Marine"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d. Marine-Stürmdivision" }
-		2 = { "%d. Marine-Stürmdivision" }
-		3 = { "%d. Marine-Stürmdivision" }
-		4 = { "%d. Marine-Stürmdivision" }
-		5 = { "%d. Marine-Stürmdivision" }
-		6 = { "%d. Marine-Stürmdivision" }
-		7 = { "%d. Marine-Stürmdivision" }
-		8 = { "%d. Marine-Stürmdivision" }
-		9 = { "%d. Marine-Stürmdivision" }
-		10 = { "%d. Marine-Stürmdivision" }
+		1 = { "%dère Div. d'Infanterie de Marine" }
+		2 = { "%dème Div. d'Infanterie de Marine" }
+		3 = { "%dème Div. d'Infanterie de Marine" }
+		4 = { "%dème Div. d'Infanterie de Marine" }
+		5 = { "%dème Div. d'Infanterie de Marine" }
+		6 = { "%dème Div. d'Infanterie de Marine" }
+		7 = { "%dème Div. d'Infanterie de Marine" }
+		8 = { "%dème Div. d'Infanterie de Marine" }
+		9 = { "%dème Div. d'Infanterie de Marine" }
+		10 = { "%dème Div. d'Infanterie de Marine" }
 	}
 }
 
@@ -245,22 +245,22 @@ MCO_MNT_01 =
 	# Number reservation system will tie to another group.
 	link_numbering_with = { MCO_INF_01 }
 
-	fallback_name = "%d. Alpenjäger-Division"
+	fallback_name = "%dème Division d'Infanterie Alpine"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d. Alpenjäger-Division" }
-		2 = { "%d. Alpenjäger-Division" }
-		3 = { "%d. Alpenjäger-Division" }
-		4 = { "%d. Alpenjäger-Division" }
-		5 = { "%d. Alpenjäger-Division" }
-		6 = { "%d. Alpenjäger-Division" }
-		7 = { "%d. Alpenjäger-Division" }
-		8 = { "%d. Alpenjäger-Division" }
-		9 = { "%d. Alpenjäger-Division" }
-		10 = { "%d. Alpenjäger-Division" }
+		1 = { "%dère Division d'Infanterie Alpine" }
+		2 = { "%dème Division d'Infanterie Alpine" }
+		3 = { "%dème Division d'Infanterie Alpine" }
+		4 = { "%dème Division d'Infanterie Alpine" }
+		5 = { "%dème Division d'Infanterie Alpine" }
+		6 = { "%dème Division d'Infanterie Alpine" }
+		7 = { "%dème Division d'Infanterie Alpine" }
+		8 = { "%dème Division d'Infanterie Alpine" }
+		9 = { "%dème Division d'Infanterie Alpine" }
+		10 = { "%dème Division d'Infanterie Alpine" }
 	}
 }
 
@@ -277,22 +277,22 @@ MCO_GAR_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { MCO_INF_01 }
 
-	fallback_name = "%d. Landesschützen-Division"
+	fallback_name = "%dème Division de Forteresse"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d. Landesschützen-Division" }
-		2 = { "%d. Landesschützen-Division" }
-		3 = { "%d. Landesschützen-Division" }
-		4 = { "%d. Landesschützen-Division" }
-		5 = { "%d. Landesschützen-Division" }
-		6 = { "%d. Landesschützen-Division" }
-		7 = { "%d. Landesschützen-Division" }
-		8 = { "%d. Landesschützen-Division" }
-		9 = { "%d. Landesschützen-Division" }
-		10 = { "%d. Landesschützen-Division" }		
+		1 = { "%dère Division de Forteresse" }
+		2 = { "%dème Division de Forteresse" }
+		3 = { "%dème Division de Forteresse" }
+		4 = { "%dème Division de Forteresse" }
+		5 = { "%dème Division de Forteresse" }
+		6 = { "%dème Division de Forteresse" }
+		7 = { "%dème Division de Forteresse" }
+		8 = { "%dème Division de Forteresse" }
+		9 = { "%dème Division de Forteresse" }
+		10 = { "%dème Division de Forteresse" }		
 	}
 }
 

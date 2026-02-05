@@ -1,21 +1,89 @@
-﻿capital = 1021
+﻿capital = 1051
 
 oob = "VAT_1936"
 
-set_war_support = 0.0
-set_stability = 0.8
-
-add_ideas = {
-	disarmed_nation
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	tech_support = 1
+	tech_engineers = 1
+	basic_train = 1
+	gw_artillery = 1
 }
 
-recruit_character = VAT_pope_pius_xi
-recruit_character = VAT_pope_pius_xii
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		aircraft_construction = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+}
+
+recruit_character = VAT_pius_xi
+recruit_character = VAT_pius_xii
 
 1939.1.1 = {
 	add_political_power = 1198
+	add_command_power = 100
+
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = construction_effort_2
+	complete_national_focus = production_effort_2
+	complete_national_focus = infrastructure_effort
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
 	
 	oob = "VAT_1939"
+
+	set_technology = {
+		tech_recon = 1
+		interwar_artillery = 1
+		interwar_antiair = 1
+
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		fuel_silos = 1
+		construction1 = 1
+		construction2 = 1
+	}
+
+	if = {
+		limit = {
+			NOT = { has_dlc = "By Blood Alone" }
+		}
+		set_technology = {
+			fighter1 = 1
+		}
+	}
+
+	complete_special_project = {
+		project = sp:sp_air_radar
+	}
+
+	set_grand_doctrine = grand_battleplan
+	set_grand_doctrine = new_strategic_destruction
 }
 
 set_politics = {
@@ -27,15 +95,4 @@ set_politics = {
 
 set_popularities = {
 	neutrality = 100
-}
-
-1939.1.1 = {
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1939.3.2"
-		election_frequency = 48
-		elections_allowed = no
-	}
-	promote_character = VAT_pope_pius_xii
-	retire_character = VAT_pope_pius_xi
 }

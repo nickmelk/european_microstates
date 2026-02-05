@@ -1,0 +1,50 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_ADO_general_council"
+		texturefile = "gfx/leaders/ADO/portrait_ADO_general_council.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ADO_boris_i"
+		texturefile = "gfx/leaders/ADO/portrait_ADO_boris_i.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ADO_francesc_cairat_fleixes"
+		texturefile = "gfx/leaders/ADO/portrait_ADO_francesc_cairat_fleixes.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_LIE_otto_schaedler"
+		texturefile = "gfx/leaders/LIE/portrait_LIE_otto_schaedler.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_LIE_alfons_goop"
+		texturefile = "gfx/leaders/LIE/portrait_LIE_alfons_goop.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_LIE_franz_i"
+		texturefile = "gfx/leaders/LIE/portrait_LIE_franz_i.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_LIE_franz_joseph_ii"
+		texturefile = "gfx/leaders/LIE/portrait_LIE_franz_joseph_ii.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MCO_louis_ii"
+		texturefile = "gfx/leaders/MCO/portrait_MCO_louis_ii.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SMR_gino_giacomini"
+		texturefile = "gfx/leaders/SMR/portrait_SMR_gino_giacomini.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SMR_giuliano_gozi"
+		texturefile = "gfx/leaders/SMR/portrait_SMR_giuliano_gozi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_VAT_pius_xi"
+		texturefile = "gfx/leaders/VAT/portrait_VAT_pius_xi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_VAT_pius_xii"
+		texturefile = "gfx/leaders/VAT/portrait_VAT_pius_xii.dds"
+	}
+}

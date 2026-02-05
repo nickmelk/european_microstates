@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Public Force"
+	name = "Landespolizei des Fürstentums Liechtenstein"
 	division_names_group = LIE_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
